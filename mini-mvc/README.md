@@ -12,7 +12,7 @@ app
 
 config  libraries   views
 
-&
+and
 
 bootstrap.php: includes config/config.php, libraries, views, calls url function 
 
