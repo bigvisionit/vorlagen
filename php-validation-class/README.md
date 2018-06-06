@@ -7,43 +7,43 @@ This is a small validation class.
 
 ### Validation Types
 
-MAIL
+[MAIL]
 
-URL
+[URL]
 
-IP
+[IP]
 
-DATE
+[DATE]
 
-ZIP
+[ZIP]
 
-PHONE
+[PHONE]
 
-INTEGER
+[INTEGER]
 
-NUMERIC
+[NUMERIC]
 
-CURRENCY
+[CURRENCY]
 
-BASE64
+[BASE64]
 
-ALPHA
+[ALPHA]
 
-ALPHANUM
+[ALPHANUM]
 
-LOWERCASE
+[LOWERCASE]
 
-UPPERCASE
+[UPPERCASE]
 
-MIN
+[MIN]
 
-MAX
+[MAX]
 
-BETWEEN
+[BETWEEN]
 
-NOT_EMPTY
+[NOT_EMPTY]
 
-MATCH
+[MATCH]
 
 ### Example usage
 
@@ -131,19 +131,22 @@ if(Validate::getInstance()->isValid(
 				
 					case 'NOT_EMPTY':
 					
-						$this->template->set('resultMessage', translate('index.register.messagePassword1NotEmpty'));
+						$this->template->set('resultMessage', 
+						translate('index.register.messagePassword1NotEmpty'));
 						
 						return;
 						
 					case 'BETWEEN':
 					
-						$this->template->set('resultMessage', translate('index.register.messagePassword1Min'));
+						$this->template->set('resultMessage', 
+						translate('index.register.messagePassword1Min'));
 						
 						return;
 						
 					case 'MATCH':
 					
-						$this->template->set('resultMessage', translate('index.register.messagePassword1Match'));
+						$this->template->set('resultMessage', 
+						translate('index.register.messagePassword1Match'));
 						
 						return;
 						
@@ -161,19 +164,22 @@ if(Validate::getInstance()->isValid(
 				
 					case 'NOT_EMPTY':
 					
-						$this->template->set('resultMessage', translate('index.register.messagePassword2NotEmpty'));
+						$this->template->set('resultMessage',
+						translate('index.register.messagePassword2NotEmpty'));
 						
 						return;
 						
 					case 'BETWEEN':
 					
-						$this->template->set('resultMessage', translate('index.register.messagePassword2Min'));
+						$this->template->set('resultMessage',
+						translate('index.register.messagePassword2Min'));
 						
 						return;
 						
 					case 'MATCH':
 					
-						$this->template->set('resultMessage', translate('index.register.messagePassword2Match'));
+						$this->template->set('resultMessage',
+						translate('index.register.messagePassword2Match'));
 						
 						return;
 						
