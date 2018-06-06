@@ -8,23 +8,41 @@ This is a small validation class.
 ### Validation Types
 
 MAIL
+
 URL
+
 IP
+
 DATE
+
 ZIP
+
 PHONE
+
 INTEGER
+
 NUMERIC
+
 CURRENCY
+
 BASE64
+
 ALPHA
+
 ALPHANUM
+
 LOWERCASE
+
 UPPERCASE
+
 MIN
+
 MAX
+
 BETWEEN
+
 NOT_EMPTY
+
 MATCH
 
 ### Example usage
@@ -41,11 +59,14 @@ MATCH
 
 if(Validate::getInstance()->isValid(
 
-	[ 'name' => 'Username', 'value' => $_POST['Username'], 'min' => 2, 'max' => 20, 'validate' => [ Validate::NOT_EMPTY, Validate::BETWEEN ] ],
+	[ 'name' => 'Username', 'value' => $_POST['Username'], 'min' => 2, 'max' => 20, 
+	'validate' => [ Validate::NOT_EMPTY, Validate::BETWEEN ] ],
 	
-	[ 'name' => 'Password', 'value' => $_POST['Password'], 'min' => 5, 'max' => 50, 'match' => $_POST['Password2'], 'validate' => [ Validate::NOT_EMPTY, Validate::BETWEEN, Validate::MATCH ] ],
+	[ 'name' => 'Password', 'value' => $_POST['Password'], 'min' => 5, 'max' => 50, 
+	'match' => $_POST['Password2'], 'validate' => [ Validate::NOT_EMPTY, Validate::BETWEEN, Validate::MATCH ] ],
 	
-    [ 'name' => 'Password2', 'value' => $_POST['Password2'], 'min' => 5, 'max' => 50, 'match' => $_POST['Password'], 'validate' => [ Validate::NOT_EMPTY, Validate::BETWEEN, Validate::MATCH ] ],
+    [ 'name' => 'Password2', 'value' => $_POST['Password2'], 'min' => 5, 'max' => 50, 
+	'match' => $_POST['Password'], 'validate' => [ Validate::NOT_EMPTY, Validate::BETWEEN, Validate::MATCH ] ],
 	
 	[ 'name' => 'Email', 'value' => $_POST['Email'], 'validate' => [ Validate::NOT_EMPTY, Validate::MAIL ] ]
 	
