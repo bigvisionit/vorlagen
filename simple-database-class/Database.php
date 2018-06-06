@@ -5,7 +5,15 @@
  Creates Prepeared Statements
  Binds params to values
  Returns rows and results
-*/ 
+*/
+
+/* db settings, put them in your config-file */
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASS", "");
+define("DB_NAME", "test");
+/* db settings, put them in your config-file */
+   
 class Database {
 	private $host = DB_HOST;
 	private $user = DB_USER;
