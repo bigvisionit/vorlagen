@@ -1,6 +1,7 @@
 <?php
   class Posts extends Controller {
     public function __construct() {
+      parent::__construct();
       if(!isset($_SESSION['user_id'])) {
         redirect('users/login');
       }
@@ -10,7 +11,7 @@
     }
 
     // Load All Posts
-    public function index(){
+    public function index() {
       $posts = $this->postModel->getPosts();
 
       $data = [
