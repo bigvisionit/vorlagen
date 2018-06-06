@@ -72,4 +72,4 @@ index.php: includes bootstrap.php and calls the core class to build the applicat
 
   2. add a translation: de.ini -> pages.index.laguage="Sprache: deutsch", en.ini -> pages.index.laguage="Language: english"  (pages: controller, index: view, language: key)
 
-  3. translate the key in the view: app/views/skins/default/pages/index.php -> <?= $this->translate('pages.index.laguage'); ?>
+  3. translate the key in the view: app/views/skins/default/pages/index.php -> $this->translate('pages.index.laguage')
