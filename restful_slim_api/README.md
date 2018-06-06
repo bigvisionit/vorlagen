@@ -7,9 +7,9 @@ This is a RESTful Slim API built with the SlimPHP framework and uses MySQL for s
 
 ### Usage
 
-GET: http://localhost/restful-slim-api/public/api/customers
+GET (ALL): http://localhost/restful-slim-api/public/api/customers
 
-GET: http://localhost/restful-slim-api/public/api/customer/{id}
+GET (ONE): http://localhost/restful-slim-api/public/api/customer/{id}
 
 POST (INSERT): http://localhost/restful-slim-api/public/api/customer/add
 
