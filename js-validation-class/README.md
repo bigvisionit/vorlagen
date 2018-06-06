@@ -62,13 +62,17 @@ This is a small validation class written in JavaScript.
 
 if(Validate.isValid(
 
-	{ name: 'Username', value: $('#username').val(), min: 2, max: 20, validate: [ Validate.NOT_EMPTY, Validate.BETWEEN ] },
+	{ name: 'Username', value: $('#username').val(), min: 2, max: 20, 
+	validate: [ Validate.NOT_EMPTY, Validate.BETWEEN ] },
 	
-	{ name: 'Password', value: $('#password').val(), min: 5, max: 50, validate: [ Validate.NOT_EMPTY, Validate.BETWEEN, Validate.MATCH ] },
+	{ name: 'Password', value: $('#password').val(), min: 5, max: 50, 
+	validate: [ Validate.NOT_EMPTY, Validate.BETWEEN, Validate.MATCH ] },
 	
-	{ name: 'Password2', value: $('#password2').val(), min: 5, max: 50, validate: [ Validate.NOT_EMPTY, Validate.BETWEEN, Validate.MATCH ] },
+	{ name: 'Password2', value: $('#password2').val(), min: 5, max: 50, 
+	validate: [ Validate.NOT_EMPTY, Validate.BETWEEN, Validate.MATCH ] },
 	
-	{ name: 'Email', value: $('#email').val(), validate: [ Validate.NOT_EMPTY, Validate.MAIL ] }
+	{ name: 'Email', value: $('#email').val(), 
+	validate: [ Validate.NOT_EMPTY, Validate.MAIL ] }
 	
 )) {
 
@@ -138,11 +142,13 @@ if(Validate.isValid(
 							errorMessage = translate('index.register.messagePassword1NotEmpty');
 
 							break;
+							
 						case 'BETWEEN':
 
 							errorMessage = translate('index.register.messagePassword1Min');
 
 							break;
+							
 						case 'MATCH':
 
 							errorMessage = translate('index.register.messagePassword1Match');
@@ -169,11 +175,13 @@ if(Validate.isValid(
 							errorMessage = translate('index.register.messagePassword2NotEmpty');
 
 							break;
+							
 						case 'BETWEEN':
 
 							errorMessage = translate('index.register.messagePassword2Min');
 
 							break;
+							
 						case 'MATCH':
 
 							errorMessage = translate('index.register.messagePassword2Match');
