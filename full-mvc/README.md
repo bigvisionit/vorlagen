@@ -57,7 +57,7 @@ index.php: includes bootstrap.php and calls the core class to build the applicat
     }
 	
 	// calls the view template with two parameters post and user
-	// in app/views/skins/default/posts/show.php you can access the data with the $data array like this: $data['post'] and $data['user']
+	// in app/views/skins/default/posts/show.php you can access the data by the $data array
 	$data = [
 		'post' => $post, 
 		'user' => $user
