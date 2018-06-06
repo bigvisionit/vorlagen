@@ -1,6 +1,6 @@
 # Simple Validation Class (PHP)
 
-This is a small validation class.
+This is a small validation class written in PHP.
 
 ### Version
 1.0.0
