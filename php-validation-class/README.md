@@ -131,22 +131,19 @@ if(Validate::getInstance()->isValid(
 				
 					case 'NOT_EMPTY':
 					
-						$this->template->set('resultMessage', 
-						translate('index.register.messagePassword1NotEmpty'));
+						$errorMessage = translate('index.register.messagePassword1NotEmpty');
 						
 						return;
 						
 					case 'BETWEEN':
 					
-						$this->template->set('resultMessage', 
-						translate('index.register.messagePassword1Min'));
+						$errorMessage = translate('index.register.messagePassword1Min');
 						
 						return;
 						
 					case 'MATCH':
 					
-						$this->template->set('resultMessage', 
-						translate('index.register.messagePassword1Match'));
+						$errorMessage = translate('index.register.messagePassword1Match');
 						
 						return;
 						
@@ -164,22 +161,19 @@ if(Validate::getInstance()->isValid(
 				
 					case 'NOT_EMPTY':
 					
-						$this->template->set('resultMessage',
-						translate('index.register.messagePassword2NotEmpty'));
+						$errorMessage = translate('index.register.messagePassword2NotEmpty');
 						
 						return;
 						
 					case 'BETWEEN':
 					
-						$this->template->set('resultMessage',
-						translate('index.register.messagePassword2Min'));
+						$errorMessage = translate('index.register.messagePassword2Min');
 						
 						return;
 						
 					case 'MATCH':
 					
-						$this->template->set('resultMessage',
-						translate('index.register.messagePassword2Match'));
+						$errorMessage = translate('index.register.messagePassword2Match');
 						
 						return;
 						
@@ -190,10 +184,5 @@ if(Validate::getInstance()->isValid(
 		}
 		
 	}
-	
-	
-	
-	
-	
 	
 }
