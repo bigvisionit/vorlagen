@@ -1,6 +1,6 @@
 # Simple Validation Class (JS)
 
-This is a small validation class written in JavaScript.
+This is a small (minified size: 4 KB) validation class written in JavaScript.
 
 ### Version
 1.0.0
