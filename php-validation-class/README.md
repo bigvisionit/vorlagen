@@ -2,6 +2,8 @@
 
 This is a very small validation class written in PHP.
 
+(size: 10 KB)
+
 ### Version
 1.0.0
 
