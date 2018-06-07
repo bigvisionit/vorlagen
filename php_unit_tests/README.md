@@ -47,10 +47,7 @@ The test creates a complete copy of the newly generated models in the "tmp" dire
 and checks on the existing models. After completion of the check, the newly created 
 directory together with the generated models.
 
-
-Translated with www.DeepL.com/Translator
-
-
+_
 
 Deutsche Version:
 
