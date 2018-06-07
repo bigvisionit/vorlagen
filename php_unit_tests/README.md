@@ -31,7 +31,7 @@ Ebenfalls wird geprüft ob alle Übersetzungsschlüssel auch in allen Sprachen v
 Es wird ebenfalls auf Duplikate geprüft und gegebenfalls die Sprachdatei und die Zeile ausgegeben.
 
 
-ModelsTest (Doctrine / PHP Zend):
+ModelsTest (Doctrine):
 
 Ein Unit Test, in dem geprüft wird, ob die generierten Models aus Doctrine (ORM) mit 
 der aktuellen Datenbank-Struktur übereinstimmen.
@@ -47,21 +47,6 @@ Meldung zum Neugenerieren der Models und die Zeilen, die nicht übereinstimmen, 
 Der Test legt eine komplette Kopie der neu generierten Models im "tmp"-Verzeichnis an 
 und prüft auf die bestehenden Models. Nach dem Abschluß der Prüfung, wird das neu erstellte 
 Verzeichnis samt der generierten Models gelöscht.
-
-
-
-
-
-
-
-
-
-
-
-
-Das DB-Install-Script prüft ob alle SQL-Scripte auch ohne Fehler ausgeführt werden konnten.
-Bei Fehlern wird das Script und der Fehler mit der Stelle ausgegeben.
-
 
 
 
