@@ -5,6 +5,54 @@ Unit Tests.
 ### Version
 1.0.0
 
+AuthorizationsTest, ConfigurationsTest & ContentConfigurationsTest:
+
+Checks if all newly added rights, settings and contents in the system are in the database scripts.
+
+The system checks whether there is an entry in the DB scripts (folder: db/scripts/version).
+Example Rights: INSERT INTO authorization (`Key`, `Comment`, `Class`, `ID_AuthorizationType`) 
+VALUES ('admin.right','Right title', NULL,'1');
+
+The admin automatically has the new rights.
+
+
+InstalldbTest:
+
+A unit test which checks whether a DB install script has run without errors.
+The result of the unit test is displayed if the test did not run without errors and output, 
+at which script (file name, line, SQL script) it terminates.
+
+
+LanguagesTest:
+
+The system checks whether the number of translation keys matches and whether they are in the same line.
+The system also checks whether all translation keys are available in all languages.
+The system also checks for duplicates and, if necessary, outputs the language file and the line.
+
+
+ModelsTest (Doctrine):
+
+A unit test that checks whether the generated models from Doctrine (ORM) with 
+of the current database structure.
+
+1. if models who do not have a table are there, the message that the contents of the folder 
+"system/application/models/generated" should be emptied and the models need to be regenerated.
+
+2. if models are missing, a message appears that the models should be regenerated.
+
+3. if the content of the models differs from the database structure, the 
+A message to regenerate the models and the lines that do not match are displayed.
+
+The test creates a complete copy of the newly generated models in the "tmp" directory 
+and checks on the existing models. After completion of the check, the newly created 
+directory together with the generated models.
+
+
+Translated with www.DeepL.com/Translator
+
+
+
+Deutsche Version:
 
 AuthorizationsTest, ConfigurationsTest & ContentConfigurationsTest:
 
