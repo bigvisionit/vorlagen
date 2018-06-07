@@ -1,0 +1,21 @@
+<phpunit bootstrap="./bootstrap.php">
+    <testsuite name="Application Test Suite">
+        <directory>./application</directory>
+        <exclude>./application/versions/VersionsTest.php</exclude>
+        <exclude>./application/models/ModelsTest.php</exclude>
+        <exclude>./application/authorizations/AuthorizationsTest.php</exclude>
+        <exclude>./application/configurations/ConfigurationsTest.php</exclude>
+        <exclude>./application/configurations/ContentConfigurationsTest.php</exclude>
+        <exclude>./application/routes/RoutesTest.php</exclude>
+        <exclude>./application/installs/InstalldbTest.php</exclude>
+    </testsuite>
+    <testsuite name="Library Test Suite">
+        <directory>./library</directory>
+    </testsuite>
+    
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../../library/Zend</directory>
+        </whitelist>
+    </filter>
+</phpunit>
