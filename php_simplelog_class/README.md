@@ -65,5 +65,5 @@ logs an exception:
 
 Log::getInstance()->logException('My log message')
 
-If you want to change the path to the logfolder,
+If you want to change the path to the log folder,
 you have to change it in the __constrtuct method: $this->_file = dirname(__FILE__) . '/../yourpath/' . $this->_file;
