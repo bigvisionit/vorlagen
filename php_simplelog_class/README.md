@@ -61,7 +61,8 @@ SimpleLog::UNKNOWN
 you can also add your own type
 
 
-// logs an exception
+logs an exception:
+
 Log::getInstance()->logException('My log message')
 
 If you want to change the path to the logfolder,
