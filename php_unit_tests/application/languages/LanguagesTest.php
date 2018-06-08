@@ -1,17 +1,20 @@
 <?php
-
-//require_once ('PHPUnit/Framework/TestCase.php');
-
+/*
+	PHP LanguagesTest
+	author: David Kempf
+*/
 class System_Languages_LanguagesTest extends PHPUnit_Framework_TestCase
 {
 
 	protected $languagesPath;
 
+	// sets the root path
 	protected function setUp()
 	{
 		$this->languagesPath = APPLICATION_PATH . '/../application/languages';
 	}
 
+	// read per line function to get rows from file
 	private function readFilePerLine($iniFilePath) {
 		$iniFile = file($iniFilePath);
 		$configKeys = array();
@@ -49,6 +52,8 @@ class System_Languages_LanguagesTest extends PHPUnit_Framework_TestCase
 		return array('keys' => $configKeys, 'lines' => $lines, 'duplicates' => $duplicates);
 	}
 	
+	// test function to run: calls readFilePerLine() and checks if all language keys are existing in all language files,
+	// checks also for positions and duplicate entries
 	function testLanguageFiles()
 	{
 		$availableLanguages = array();
@@ -148,12 +153,6 @@ class System_Languages_LanguagesTest extends PHPUnit_Framework_TestCase
 		
 		$this->assertEquals(count($deResults['keys']), count($frResults['keys']), '[ERROR] Language Files (de,fr) beinhaltet nicht die gleiche Anzahl an Keys.');
 		$this->assertEquals(count($deResults['lines']), count($frResults['lines']), '[ERROR] Language Files (de,fr) beinhaltet nicht die gleiche Anzahl an Zeilen.');
-		
-		
-		
-		
-		
-		
 	}
 
 }

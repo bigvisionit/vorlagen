@@ -1,21 +1,26 @@
 <?php
-//author: David Kempf
-
+/*
+	PHP AuthorizationsTest
+	author: David Kempf
+*/
 class Authorizations_AuthorizationsTest extends PHPUnit_Framework_TestCase
 {
 	protected $installScriptPath;
 	
+	// sets the root path
 	protected function setUp()
 	{
 		$this->installScriptPath = realpath(dirname(__FILE__)) . '/../..';
 	}
 	
+	// test function to run: calls getMissedAuthorizations() and checks if there are more than '0'
 	function testAuthorizations()
 	{
 		$missedAuthorizations = $this->getMissedAuthorizations();
     	$this->assertTrue(0 == count($missedAuthorizations), '[ERROR] Es existieren keine Script-Eintraege fuer die folgenden Authorizations:'.PHP_EOL.implode(PHP_EOL, $missedAuthorizations));
 	}
 	
+	// get missed authorizations function: gets all db scripts and checks if there are missed scripts
 	private function getMissedAuthorizations() {
 		$connection = Doctrine_Manager::getInstance()->getCurrentConnection();
 		$sql = 'SELECT * FROM authorization';
@@ -42,6 +47,7 @@ class Authorizations_AuthorizationsTest extends PHPUnit_Framework_TestCase
 		return $missedAuthorizations;
 	}
 	
+	// get all db scripts function called in getMissedAuthorizations()
 	private function getAllDBScripts() {
 		$dbInstallFiles = scandir($this->installScriptPath . '/../db/install/');
 		usort($dbInstallFiles, 'version_compare');
@@ -132,6 +138,7 @@ class Authorizations_AuthorizationsTest extends PHPUnit_Framework_TestCase
 		return $dbScriptToExecute;
 	}
 	
+	// find existing installation function to get the config, called in getAllDBScripts()
 	private function findExistingInstallation() {
 		if(file_exists($this->installScriptPath . '/../application/configs/system.ini')
 			&& file_exists($this->installScriptPath . '/../application/configs/system.ini')

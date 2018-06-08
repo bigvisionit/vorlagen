@@ -1,6 +1,8 @@
 <?php
-//author: David Kempf
-
+/*
+	PHP ModelsTest
+	author: David Kempf
+*/
 class System_Models_ModelsTest extends PHPUnit_Framework_TestCase
 {
 
@@ -8,6 +10,8 @@ class System_Models_ModelsTest extends PHPUnit_Framework_TestCase
 	protected $modelsTestPath;
 	protected $application;
 
+	// sets the root path to models and a path to temp models for the test,
+	// initialize Doctrine
 	protected function setUp()
 	{
 		$this->modelsPath = APPLICATION_PATH . '/../application/models';
@@ -23,7 +27,7 @@ class System_Models_ModelsTest extends PHPUnit_Framework_TestCase
 		Doctrine::generateModelsFromDb($this->modelsTestPath, array('doctrine'), $config);
 	}
 	
-	
+	// test function to run: calls files_are_equal() and delete_files(), checks if the generated Doctrine models are different from existing models
 	function testModels()
 	{
 		$availableModels = array();
@@ -73,6 +77,7 @@ class System_Models_ModelsTest extends PHPUnit_Framework_TestCase
 		$this->delete_files($this->modelsTestPath);
 	}
 	
+	// files equal function: called in testModels()
 	private function files_are_equal($a, $b)
 	{
 		$s1 = explode("\n", file_get_contents($a));
@@ -86,6 +91,7 @@ class System_Models_ModelsTest extends PHPUnit_Framework_TestCase
 		return 0 == count($d);
 	}
 	
+	// delete files function to delete the models test path installation: called in testModels()
 	private function delete_files($path)
 	{
 		$files = glob($path . '/*');

@@ -1,6 +1,8 @@
 <?php
-//author: David Kempf
-
+/*
+	PHP InstalldbTest
+	author: David Kempf
+*/
 class System_Installs_InstalldbTest extends PHPUnit_Framework_TestCase
 {
 	protected $dbType;
@@ -12,6 +14,7 @@ class System_Installs_InstalldbTest extends PHPUnit_Framework_TestCase
 	
 	protected $installScriptPath;
 
+	// sets the root path and db settings
 	protected function setUp()
 	{
 		$this->dbType = 'mysql';
@@ -24,6 +27,8 @@ class System_Installs_InstalldbTest extends PHPUnit_Framework_TestCase
 		$this->installScriptPath = realpath(dirname(__FILE__)) . '/../..';
 	}
 	
+	// test function to run: calls clearTestDatabase(), execSqlScript() and findExistingInstallation() 
+	// and install the db script in a temp table and checks for errors
 	function testInstalldb()
 	{
 		$dbInstallFiles = scandir($this->installScriptPath . '/../db/install/');
@@ -140,11 +145,13 @@ class System_Installs_InstalldbTest extends PHPUnit_Framework_TestCase
 		echo PHP_EOL.'Test-Installation erfolgreich beendet';
 	}
 	
+	// clear database function called testInstalldb()
 	private function clearTestDatabase() {
 		$dbConnection = new PDO($this->dbType.':host='.$this->dbHost.';port='.$this->dbPort.';dbname='.$this->dbName.';charset=UTF8', $this->dbUser, $this->dbPassword);
 		$this->execSqlScript("SET group_concat_max_len = 10000; SET FOREIGN_KEY_CHECKS = 0; SET @tables = NULL; SELECT GROUP_CONCAT('`', table_schema, '`.`', table_name, '`') INTO @tables FROM information_schema.tables WHERE table_schema = '".$this->dbName."'; SET @tables = CONCAT('DROP TABLE ', @tables); PREPARE stmt FROM @tables; EXECUTE stmt; DEALLOCATE PREPARE stmt; SET FOREIGN_KEY_CHECKS = 1;", $dbConnection);
 	}
 	
+	// execute sql script function called testInstalldb()
 	private function execSqlScript($sql, $dbConnection) {
 		$dbConnection->beginTransaction();
 		try {
@@ -163,6 +170,7 @@ class System_Installs_InstalldbTest extends PHPUnit_Framework_TestCase
 		}
 	}
 	
+	// find existing installation function to get the config, called in testInstalldb()
 	private function findExistingInstallation() {
 		if(file_exists($this->installScriptPath . '/../application/configs/system.ini')
 			&& file_exists($this->installScriptPath . '/../application/configs/system.ini')

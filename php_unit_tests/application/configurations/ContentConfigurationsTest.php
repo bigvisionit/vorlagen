@@ -1,21 +1,26 @@
 <?php
-//author: David Kempf
-
+/*
+	PHP ContentConfigurationsTest, Configurations with Language Content
+	author: David Kempf
+*/
 class System_ContentConfigurations_ContentConfigurationsTest extends PHPUnit_Framework_TestCase
 {
 	protected $installScriptPath;
 	
+	// sets the root path
 	protected function setUp()
 	{
 		$this->installScriptPath = realpath(dirname(__FILE__)) . '/../..';
 	}
 	
+	// test function to run: calls getMissedConfigurations() and checks if there are more than '0'
 	function testConfigurations()
 	{
 		$missedConfigurations = $this->getMissedConfigurations();
     	$this->assertTrue(0 == count($missedConfigurations), '[ERROR] Es existieren keine Script-Eintraege fuer die folgenden Content-Configurations:'.PHP_EOL.implode(PHP_EOL, $missedConfigurations));
 	}
 	
+	// get missed configurations function: gets all db scripts and checks if there are missed scripts
 	private function getMissedConfigurations() {
 		$connection = Doctrine_Manager::getInstance()->getCurrentConnection();
 		$sql = 'SELECT * FROM contentconfiguration';
@@ -42,6 +47,7 @@ class System_ContentConfigurations_ContentConfigurationsTest extends PHPUnit_Fra
 		return $missedConfigurations;
 	}
 	
+	// get all db scripts function called in getMissedConfigurations()
 	private function getAllDBScripts() {
 		$dbInstallFiles = scandir($this->installScriptPath . '/../db/install/');
 		usort($dbInstallFiles, 'version_compare');
@@ -132,6 +138,7 @@ class System_ContentConfigurations_ContentConfigurationsTest extends PHPUnit_Fra
 		return $dbScriptToExecute;
 	}
 	
+	// find existing installation function to get the config, called in getAllDBScripts()
 	private function findExistingInstallation() {
 		if(file_exists($this->installScriptPath . '/../application/configs/system.ini')
 			&& file_exists($this->installScriptPath . '/../application/configs/system.ini')
