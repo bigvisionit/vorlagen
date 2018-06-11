@@ -22,7 +22,7 @@ Functions overview:
 
 - string starts with and string ends with function
 
-- print_r_pre and var_dump_pre (output with '<pre>' tag)
+- print_r_pre and var_dump_pre (output with < pre > tag)
 
 - get, post, request, server, session helper functions
 
@@ -49,13 +49,21 @@ Functions overview:
 ### Example usages
 
 //..
+
 if(Helper::isPost()) {
+
 	$username = Helper::post('username');
 	
 	if(null != $username) {
+	
 		// log user with date
+		
 		Helper::logText('User ' . $username . ' logged', 'logs/logs.txt', true);
+		
 	}
+	
 	//..
+	
 }
+
 //..
