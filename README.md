@@ -504,7 +504,7 @@ msgAfterTimeout("", "Hans", 100).then((message) =>
 )
 
 
-- Combine several celebrities:
+- Combine several promises:
 
 function fetchAsync(url, timeout, onData, onError) {
 
