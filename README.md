@@ -1,4 +1,4 @@
-New Features PHP 7.0, 7.1, 7.2 and ES 6/7
+New Features PHP 7.0, 7.1, 7.2 and ES 6 / 7
 
 
 ES6 / ES7 Updates
