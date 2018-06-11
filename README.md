@@ -1,22 +1,21 @@
 New Features PHP 7.0, 7.1, 7.2 and ES 6/7
 
-(German)
 
 ES6 / ES7 Updates
 
 
-- let - Variablen:
+let variables:
 
 for(let i = 0; i < 10; i++) {
 
-    let x = i // x und i sind nur innerhalb der for - Schleife gültig
+    let x = i // x and i are only valid within the for loop
 
 }
 
-Var - Variablen x und i wären auch nach der Schleife noch vorhanden, was nicht gewollt ist!
+Var - variables x and i would still be present after the loop, which is not wanted!
 
 
-- Konstanten:
+constants:
 
 
 const element = document.querySelector('#elementId');
@@ -24,15 +23,15 @@ const element = document.querySelector('#elementId');
 const template = `HTML`;
 
 
-Alle HTML-Elemente, Objekte, Arrays oder feste Werte sollte als eine Konstante definiert werden, da sie sowieso im Laufe des Codes nicht geändert werden sollten!
+All HTML elements, objects, arrays or fixed values should be defined as a constant, because they should not be changed during the code anyway!
 
-Objekte und Arrays können auch danach geändert werden, dürfen jedoch nich komplett neu erstellt werden, was auch Sinn macht.
-
-
-- Arrow-Functions:
+Objects and arrays can also be changed afterwards, but may not be created from scratch, which makes sense.
 
 
-Eine Funktion:
+Arrow functions:
+
+
+One function:
 
 function func(i, j) {
 
@@ -40,26 +39,26 @@ function func(i, j) {
 
 }
 
-Kann auch so geschrieben werden:
+Can also be written like this:
 
 (i, j) => i + j
 
-Aufruf: ((i, j) => i + j)(1, 1) // = 2
+Call: ((i, j) => i + j)(1, 1) // = 2
 
-Als Callback:
+As callback:
 
-const arr = [1, 2, 3];
+const arr =[1, 2, 3];
 
 arr.forEach(i => {
 
    if(i < 3)
    
-       console.log(i); // Ausgabe 1, 2
+       console.log(i); // Issue 1, 2
 
 });
 
 
-- Standard-Parameter:
+Default parameters:
 
 
 function func(i, j = 1) {
@@ -69,7 +68,7 @@ function func(i, j = 1) {
 }
 
 
--  Rest-Parameter:
+Remaining parameters:
 
 
 function func(i, j, ...name) {
@@ -78,23 +77,23 @@ function func(i, j, ...name) {
 
 }
 
-Aufruf:
+Call:
 
-func(1, 2, 3, 4) // Ausgabe 5
+func(1, 2, 3, 4) // Issue 5
 
-Restliche Parameter können direkt in einer Funktion über einen festgelegten Namen als Array aufgerufen werden.
+Remaining parameters can be called directly in a function using a specified name as an array.
 
 
-- Spread-Operator:
+Spread operator:
 
 
 let arr1 = [ 1, 2, 3 ]
 
-let arr2 = [ 1, 2, ...arr1 ] // Ausgabe [ 1, 2, 1, 2, 3 ]
+let arr2 = [ 1, 2,...arr1 ] // Edition [ 1, 2, 1, 2, 3 ]
 
-Arrays können so einfach zusammengefasst werden.
+Arrays can thus be easily combined.
 
-Als Parameter:
+As a parameter:
 
 function func(i, j, ...name) {
 
@@ -103,47 +102,47 @@ function func(i, j, ...name) {
 }
 
 
-Aufruf:
+Call:
 
-func(1, 2, ...arr1) // Ausgabe 6
+func(1, 2, ...arr1) // Issue 6
 
-Hier werden die Werte des Array [ 1, 2, 3 ] direkt an den Rest-Parameter der Funktion übergeben.
+Here the values of the array [ 1, 2, 3 ] are passed directly to the remaining parameter of the function.
 
-Als String:
+As a string:
 
 let str = "foo"
 
-let chars = [ ...str ] // [ "f", "o", "o" ]
+let chars = [...str  // [ "f", "o", "o" ]
 
-Die einfachste Möglichkeit um Strings in einzelne in Chars umzuwandeln.
+The easiest way to convert strings into single chars.
 
 
-- String - Literale (Templating):
+String - Literals (Templating):
 
 
 let x = 1;
 
-let message = `Der Wert ${x},
+let message = `The value ${x},
 
-wird hier ausgegeben. ${x} + 1 ergibt ${x+1}`
+is displayed here. ${x} + 1 equals ${x+1}`
 
-Großer HTML-Inhalt kann mit Hilfe des '`' - Zeichens auch über mehrere Zeilen geschrieben werden.
+Large HTML content can also be written over several lines using the ``' character.
 
-${} führen Vriablen oder JavaScript Code direkt nach der Zuweisung aus.
+${} execute Vriablen or JavaScript code directly after assignment.
 
 
-- Objekt - Kurzschreibweise:
+Object - Short notation:
 
 
 let i = 1, j = 2
 
-obj = { i, j } // Ausgabe { i: 1, j: 2}
+obj = { i, j } // Output { i: 1, j: 2}
 
  
-Kurzschreibweise um Variablen mit Namen an einen Objekt übergeben zu können.
+Short notation to pass variables with names to an object.
 
 
-Als Funktion:
+As a function:
 
 
 obj = {
@@ -162,12 +161,12 @@ obj = {
 
 }
 
-// Ausgabe: { func1: function(i, j) {}, func2: function(i, j) {} }
+output: { func1: function(i, j) {}, func2: function(i, j) {} }
 
-Kurzschreibweise um Funktionen mit Namen an einen Objekt übergeben zu können.
+Short notation to pass functions with names to an object.
 
 
-- Objekt - dynamische Eigenschaften:
+Object - dynamic properties:
 
 
 let obj = {
@@ -178,30 +177,30 @@ let obj = {
 
 }
 
-// Ausgabe: { i: 1, i123: 2 }
+Output: { i: 1, i123: 2 }
 
-Objekt-Eigenschaften können über [] dynamisch benannt werden.
+Object properties can be named dynamically using [].
 
 
-- Variable aus Array-Zuweisung;
+Variable from array assignment;
 
 
 let arr = [ 1, 2, 3 ]
 
-let [ x, , y ] = arr // Ausgabe Variable x = 1, y = 3
+let [ x x, ] = arr // Output Variable x = 1, y = 3
 
 
-Die Variblen mit dem Namen x und y werden mit den Werten aus dem Array erzeugt.
+The variables named x and y are generated with the values from the array.
 
 
-Variablen-Tausch:
+Variable swap:
 
-[ x, y ] = [ y, x ]
+][x, y =[y, x]
 
-Die einfachste Möglichkeit um Variablen zu vertauschen.
+The easiest way to swap variables.
 
 
-- Variable aus Objekt-Zuweisung:
+Variable from object assignment:
 
 
 function getSpecObj() {
@@ -210,12 +209,12 @@ function getSpecObj() {
 
 }
 
-let { name1, name2, name3 } = getSpecObj() // Ausgabe Variable name1 = 1, name2 = 2, name3 = 3
+let { name1, name2, name3 } = getSpecObj() // Output variable name1 = 1, name2 = 2, name3 = 3
 
-Die Variablen mit dem Namen name1, name2 und name3 werden mit den Werten aus dem Objekt erzeugt.
+The variables with the names name1, name2 and name3 are created with the values from the object.
 
 
-Tiefen-Zuweisung:
+Depth assignment:
 
 function getSpecObj() {
 
@@ -223,546 +222,76 @@ function getSpecObj() {
 
 }
 
-let { name1: i, name2: j, name3: { name4: x } } = getSpecObj() // Ausgabe Variable i = name1 = 1, j = name2 = 2, x = name4 = 4
+let { name1: i, name2: j, name3: { name4: x } } = getSpecObj() // Output Variable i = name1 = 1, j = name2 = 2, x = name4 = 4
 
 
-Die Variablen mit dem Namen i, j und x werden mit den Werten aus dem Objekt durch Zuweisung der Objekt-Namen erzeugt.
+The variables with the names i, j and x are created with the values from the object by assigning the object names.
 
 
-- Variable aus Objekt- und Array-Zuweisung mit Standard-Parametern:
+Variable from object and array assignment with standard parameters:
 
 
-Objekt-Zuweisung:
+Object assignment:
 
 
 const obj = { x: 1 }
 
 const arr = [ 1 ]
 
-let { x, y = 2 } = obj // Ausgabe Variable x = 1, y = 2
+let { x, y = 2 } = obj // Output variable x = 1, y = 2
 
-Die Variablen mit dem Namen x und y werden mit den Werten aus dem Objekt erzeugt. y wird standardmäßig mit dem Wert 2 belegt, wenn das Objekt keine Eigenschaft mit demselben Namen besitzt.
-
-
-Array-Zuweisung:
-
-let [ x, y = 2, z ] = arr // Ausgabe Variable x = 1, y = 2, z = undefined
-
-Die Variablen mit dem Namen x und y werden mit den Werten aus dem Array erzeugt. y wird standardmäßig mit dem Wert 2 belegt, wenn das Array keinen Wert mit demselben Index besitzt.
+The variables with the names x and y are generated with the values from the object. y is assigned the value 2 by default if the object has no property with the same name.
 
 
-- Objekt- und Array Zuweisung als Parameter einer Funktion:
+Array assignment:
+
+let [ x, y = 2, z  = arr // Output Variable x = 1, y = 2, z = undefined
+
+The variables with the names x and y are generated with the values from the array. y is assigned the value 2 by default if the array has no value with the same index.
 
 
-Parameter als Array:
+Object and array assignment as parameters of a function:
+
+
+parameter as an array:
 
 function func1([ param1, param2 ]) {
 
-    //Ausgabe Variable param1 = 1 param2 = 2
+    Output Variable param1 = 1 param2 = 2
 
 }
 
 func1([ 1, 2 ]);
 
-Es werden die Werte nach der Reihenfolge im Array der Variable param1 und param2 übergeben
+The values are passed in the order in the array of variables param1 and param2
 
 
-Parameter als Objekt:
+parameter as an object:
 
 
 function func2({ param1: p1, param2: p2 }) {
 
-    //Ausgabe Variable p1 = 1, p2 = 2
+    Output variable p1 = 1, p2 = 2
 
 }
 
 
-func2({ param1: 1, param2: 2 })
+func2({ param1: 1, param2: 2 }))
 
  
-Es werden die Werte nach der Zuweisung im Objekt der Variable p1 = param1 = 1 und p2 = param2 = 2 übergeben
+After the assignment, the values are transferred in the object of the variables p1 = param1 = 1 and p2 = param2 = 2
 
 
-Kurzschreibweise:
+Abbreviated form:
 
 function func3({ param1, param2 }) {
 
-    //Ausgabe Variable param1 param2
+    Output Variable param1 param2
 
 }
 
 func3({ param1: 1, param2: 2 });
 
-Es werden die Werte nach der Zuweisung im Objekt der Variable param1 = 1 und param2 = 2 übergeben
+E flat 
 
-
-- Klassen:
-
-
-class className {
-
-    constructor(i, j) {
-
-        this._i = i
-
-        this._j = j
-
-        this.increment()
-
-    }
-
-    set i(i) { this._i = i }
-
-    get i() { return this._i }
-
-    increment() {
-
-        this._i++;
-
-        this._j++;
-
-    }
-
-    static func() {
-
-        //do something..
-
-    }
-
-}
-
-class className2 extends className {
-
-    constructor(i, j) {
-
-        super(i, j)
-
-    }
-
-}
-
-Aufruf:
-
-const myObj = new className(1, 1); // Ausgabe myObj.i = 1
-
-Klassen können über das Wort "class" erstellt werden. Konstruktor wird über das Wort "constructor" erstellt.
-
-Vererbung wird über das Wort "extends" angegeben und der Aufruf der Oberklasse über das Wort "super".
-
-Statische Methoden werden über das Schlüsselwort "static" definiert.
-
-Getter und Setter werden über die Wörter "get" und "set" gesetzt.
-
-
-- Sets:
-
-
-const s = new Set()
-
-s.add(1).add(2) // Werte hinzufügen
-
-Sets können beliebige Werte enthalten und werden immer sortiert abgespeichert
-
-Ausgabe der Set-Größe:
-
-console.log(s.size)
-
-Prüfung auf Vorhandensein eines Wertes:
-
-console.log(s.has(2)) // Ausgabe "true"
-
-Wert aus dem Set entfernen:
-
-s.delete(2);
-
-Durchlaufen eins Sets nach der Reihenfolge des Einfügens:
-
-for(let key of s.values()) {
-
-    console.log(key) // Ausgabe 1, 2
-
-}
-
-
-- Maps:
-
-
-let m = new Map()
-
-m.set("test", 1) // Schlüssel "test" den Wert 1 zuweisen
-
-Maps können beliebige Werte enthalten und werden über ein Key gesetzt
-
-Ausgabe eines Wertes über den Key:
-
-console.log(m.get('test')); // Ausgabe 1
-
-Ausgabe der Map-Größe:
-
-console.log(m.size) // Ausgabe 1
-
-Wert über den Schlüssel aus der Map entfernen:
-
-m.delete("test");
-
-Durchlaufen einer Map:
-
-for(let[key, val] of m.entries()) {
-
-    console.log(key + " = " + val)
-
-}
-
-
-- Neuere Methoden:
-
-Objekte zusammenfügen:
-
-var obj1 = { prop1: 1 }
-
-var obj2 = { prop2: 2, prop3: 3 }
-
-var obj3 = { prop3: 4, prop5: 5 }
-
-Object.assign(obj1, obj2, obj3) // Ausgabe { prop1: 1, prop2: 2, prop3: 4, prop5: 5 }
-
-Objekte können über Object.assign() gemerged werden
-
-
-Array-Suche:
-
-[ 1, 3, 4, 2 ].find(x => x > 3) // Ausgabe 4
-
-[ 1, 3, 4, 2 ].findIndex(x => x > 3) // Ausgabe 2
-
-
-String-Wiederholung:
-
-"test".repeat(3) // Ausgabe "testtesttest"
-
-
-String-Suche:
-
-"hello".includes("ell")       // Ausgabe "true"
-
-"hello".includes("ell", 1)    // Parameter 2 = Index, Ausgabe "true"
-
- 
-String startsWith und endsWith:
-
- 
-"hello".startsWith("ello", 1) // Parameter 2 = Index, Ausgabe "true"
-
-"hello".endsWith("hell", 4)   // Parameter 2 = Index, Ausgabe "true"
-
- 
-
-NaN und Finite Prüfung:
-
-
-Number.isNaN(NaN) // Ausgabe "true"
-
-Number.isFinite(NaN) // Ausgabe "false"
-
-
-Prüfung auf sichere Integers innerhalb des Gültigkeitbereichs:
-
-
-Number.isSafeInteger(1) // Ausgabe "true"
-
-Number.isSafeInteger(9007199254740992) // Ausgabe "false"
-
-
-Abschneiden der Nachkommastellen:
-
-Math.trunc(99.9)) // 99
-
-
-- Promises - Asynchroner Aufruf von Methoden bei Rückgabe:
-
-
-function msgAfterTimeout(nachricht, name, timeout) {
-
-    return new Promise((resolve, reject) => {
-
-        setTimeout(() => resolve(`${nachricht} Hallo ${name}!`), timeout)
-
-    })
-
-}
-
-msgAfterTimeout("", "Hans", 100).then((nachricht) =>
-
-		msgAfterTimeout(nachricht, "Wurst", 200)
-
-	).then((nachricht) => {
-
-		console.log(`done after 300ms:${nachricht}`)
-
-	}
-
-)
-
-
-Mehrere Promises kombinieren:
-
-function fetchAsync(url, timeout, onData, onError) {
-
-    …
-
-}
-
-let fetchPromised = (url, timeout) => {
-
-    return new Promise((resolve, reject) => {
-
-        fetchAsync(url, timeout, resolve, reject)
-
-    })
-
-}
-
-Promise.all([
-
-    fetchPromised("url1", 500),
-
-    fetchPromised("url2", 500),
-
-    fetchPromised("url3", 500)
-
-]).then((data) => {
-
-    let [ data1, data2, data3 ] = data
-
-    console.log(`success: data1=${data1} data2=${data2} data3=${data3}`)
-
-}, (err) => {
-
-   console.log(`error: ${err}`)
-
-})
-
-
-- Proxys - Dynamischer Aufruf und entsprechende Rückgabe in Objekt-Schreibweise:
-
-let target = {
-
-    test: "Willkommen, test"
-
-}
-
-let proxy = new Proxy(target, {
-
-    get(receiver, name) {
-
-        return name in receiver ? receiver[name] : `Nicht bekannt: ${name}`
-
-    }
-
-})
-
-proxy.test // Ausgabe "Willkommen, test"
-
-proxy.maxmustermann // Ausgabe "Nicht bekannt: maxmustermann"
-
-
-- Reflection - Dynamischer Aufruf und entsprechende Rückgabe in Objekt-Schreibweise (ähnlich der Proxys):
-
-
-let obj = { a: 1 }
-
-Object.defineProperty(obj, 'b', { value: 2 })
-
-obj['c'] = 3
-
-console.log(Reflect.ownKeys(obj)) // Ausgabe [ 'a', 'b', 'c' ]
-
-
-
-
-
-
-
-PHP 7 / 7.1 / 7.2 Updates
-
-
-- Sortieren von Arrays:
-
-
-Der <=> Operator erspart einem eine komplette Überprüfung oder Vergleiche auf <, =, und >..
-
-
-$arr = array(1,3,2);
-
-usort($arr, function($a, $b) {
-
-    return $a <=> $b;
-
-});
-
-//$arr => 1, 2, 3
-
-
-
-- Holen der Request-Werte (POST, GET etc.):
-
-
-$userId = $_POST['ID_User'] ?? $_GET['ID_User'] ?? 'System kennt den User nicht!';
-
- 
-Hierbei werden auch keine Fehler beim direkten Zugriff aus $_POST geschmissen.
-
-
-- Anonyme Klassen:
-
-
-class User {
-
-	public $name;
-
-	public function hallo() {
-
-				   echo 'Hallo ' . $this->name;
-
-	}
-
-}
-
-$maxMustermann = new class('Max Mustermann') extends User {
-
-	public function __construct($name) {
-
-				   $this->name = $name;
-
-	}
-
-};
-
-echo $maxMustermann->hallo();
-
-
-- Typdeklarationen
-
-
-function ausgabe(string $wert): string {
-
-    echo $wert;
-
-}
-
-seit PHP 7.1 auch '?datentyp' : Wert kann auch null sein
-
-seit PHP 7.1 auch 'void' : Keine Rückgabe
-
-seit PHP 7.2 auch 'object' möglich
-
-
-- Fehlerbehandlung
-
-
-try {
-
-    //Aufruf einer unbekannten Funktion
-
-    unbekannteFunktion();
-
-} catch(Exception $e) {
-
-    //in PHP 5.6 nicht ausgeführt!
-
-    //in PHP 7 nicht ausgeführt weil Typ 'Error'
-
-} catch(Error $e) {
-
-    //in PHP 7 ausgeführt
-
-    //gibt es in PHP 5.6 gar nicht..
-
-} finally {
-
-    //in PHP 5.6 nicht ausgeführt!
-
-    //in PHP 7 ausgeführt
-
-}
-
-alternativ:
-
-//..
-
-} catch(Exception | Error $e) { // fängt Exception und Error ab
-
-    //..
-
-}
-
-//..
-
-//..oder..
-
-//..
-
-} catch(Throwable) { // fängt Exception und Error und alle Throwables ab
-
-    //..
-
-}
-
-//..
-
-- Zufallsfunktion
-
-
-echo random_int(1, 100);
-
-
-- Parameter bei session_start direkt möglich (unterschiedliches Session-Handling möglich)
-
-
-session_start([
-
-    'cookie_lifetime' => 86400
-
-]);
-
-
-- Definition von Array Konstanten
-
-
-define('SETTINGS', [
-
-    'setting1' => '1',
-
-    'setting2' => '2'
-
-]);
-
-
-echo SETTINGS['setting1'];
-
-- Zugriffe auf Daten
-
-
-$data = [
-
-    'c' => 1,
-
-    'd' => 2
-
-];
-
-['c' => $a, 'd' => $b] = $data;
-
-echo $a;
-
-echo $b;
-
-
-- Zugriff auf beliebige String-Positionen
-
-
-$string[-1] // => das letzte Zeichen usw.
-
-strpos($string, 'a', -2) // => zähle von hinten ab Position 2 usw.
-
- 
+Translated with www.DeepL.com/Translator
