@@ -31,7 +31,7 @@ Objects and arrays can also be changed afterwards, but may not be created from s
 Arrow functions:
 
 
-One function:
+Simple function:
 
 function func(i, j) {
 
