@@ -4,7 +4,7 @@ This is a small (2 KB uncompressed) modern http class written in ES7 JavaScript.
 
 It uses async and await and can be used in ajax / rest requests.
 
-It is recommended using Webpack with Babel to generate ES5 JavaScript for older browsers.
+It is recommended using Webpack with Babel and Babel-Polyfill to generate ES5 JavaScript for older browsers.
 
 Functions overview:
 
