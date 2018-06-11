@@ -1402,7 +1402,7 @@ class User {
 
 	public function hallo() {
 
-				   echo 'Hallo ' . $this->name;
+		echo 'Hallo ' . $this->name;
 
 	}
 
@@ -1412,7 +1412,7 @@ $maxMustermann = new class('Max Mustermann') extends User {
 
 	public function __construct($name) {
 
-				   $this->name = $name;
+		$this->name = $name;
 
 	}
 
