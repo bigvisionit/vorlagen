@@ -112,7 +112,7 @@ As a string:
 
 let str = "foo"
 
-let chars = [...str  // [ "f", "o", "o" ]
+let chars = [...str ]  // [ "f", "o", "o" ]
 
 The easiest way to convert strings into single chars.
 
