@@ -36,4 +36,5 @@ http.get('users').then(data => console.log(data)).catch(err => console.log(err))
 // simple post request
 
 const username = 'max';
+
 http.post('users/add', { username }).then(data => console.log(data)).catch(err => console.log(err));
