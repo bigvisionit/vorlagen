@@ -89,7 +89,7 @@ Spread operator:
 
 let arr1 = [ 1, 2, 3 ]
 
-let arr2 = [ 1, 2,...arr1 ] // Edition [ 1, 2, 1, 2, 3 ]
+let arr2 = [ 1, 2,...arr1 ] // result [ 1, 2, 1, 2, 3 ]
 
 Arrays can thus be easily combined.
 
