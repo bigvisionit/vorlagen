@@ -1,6 +1,6 @@
 # Gulp Webpack Workflow
 
-It uses webpack, gulp, babel and webpack-dev-server to compile and serve.
+It uses webpack, gulp, babel and gulp-connect to compile and serve.
 
 It can be used for multiple projects separated by modules.
 
