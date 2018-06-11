@@ -691,32 +691,6 @@ if($existing) {
 </body>
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php elseif($action == 'testdb') : ?><?php 
 if(checkDatabaseConnection()) {
 	echo 'ok';
