@@ -77,14 +77,18 @@ Functions overview:
 ### Example usage
 
 // get and toggle the input with id 'input'
+
 const input = UIElements.getElement('#input');
+
 UIElements.toggle(input);
 
 UIElements.addClass(input, 'toggle_on');
 
 
 // get all elements in a container by query
+
 const container = UIElements.getElement('#container ul');
+
 const arrayOfElements = getElements('li', container, true);
 
 
