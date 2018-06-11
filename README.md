@@ -1,10 +1,11 @@
-Updates
+New Features PHP 7.0, 7.1, 7.2 and ES 6/7
 
+(German)
 
 ES6 / ES7 Updates
 
 
-1.  let - Variablen:
+- let - Variablen:
 
 for(let i = 0; i < 10; i++) {
 
@@ -15,7 +16,7 @@ for(let i = 0; i < 10; i++) {
 Var - Variablen x und i wären auch nach der Schleife noch vorhanden, was nicht gewollt ist!
 
 
-2.  Konstanten:
+- Konstanten:
 
 
 const element = document.querySelector('#elementId');
@@ -28,7 +29,7 @@ Alle HTML-Elemente, Objekte, Arrays oder feste Werte sollte als eine Konstante d
 Objekte und Arrays können auch danach geändert werden, dürfen jedoch nich komplett neu erstellt werden, was auch Sinn macht.
 
 
-3.  Arrow-Functions:
+- Arrow-Functions:
 
 
 Eine Funktion:
@@ -58,7 +59,7 @@ arr.forEach(i => {
 });
 
 
-4.  Standard-Parameter:
+- Standard-Parameter:
 
 
 function func(i, j = 1) {
@@ -68,7 +69,7 @@ function func(i, j = 1) {
 }
 
 
-5.  Rest-Parameter:
+-  Rest-Parameter:
 
 
 function func(i, j, ...name) {
@@ -84,7 +85,7 @@ func(1, 2, 3, 4) // Ausgabe 5
 Restliche Parameter können direkt in einer Funktion über einen festgelegten Namen als Array aufgerufen werden.
 
 
-6.  Spread-Operator:
+- Spread-Operator:
 
 
 let arr1 = [ 1, 2, 3 ]
@@ -117,7 +118,7 @@ let chars = [ ...str ] // [ "f", "o", "o" ]
 Die einfachste Möglichkeit um Strings in einzelne in Chars umzuwandeln.
 
 
-7.  String - Literale (Templating):
+- String - Literale (Templating):
 
 
 let x = 1;
@@ -131,7 +132,7 @@ Großer HTML-Inhalt kann mit Hilfe des '`' - Zeichens auch über mehrere Zeilen 
 ${} führen Vriablen oder JavaScript Code direkt nach der Zuweisung aus.
 
 
-8.  Objekt - Kurzschreibweise:
+- Objekt - Kurzschreibweise:
 
 
 let i = 1, j = 2
@@ -166,7 +167,7 @@ obj = {
 Kurzschreibweise um Funktionen mit Namen an einen Objekt übergeben zu können.
 
 
-9.  Objekt - dynamische Eigenschaften:
+- Objekt - dynamische Eigenschaften:
 
 
 let obj = {
@@ -182,7 +183,7 @@ let obj = {
 Objekt-Eigenschaften können über [] dynamisch benannt werden.
 
 
-10.  Variable aus Array-Zuweisung;
+- Variable aus Array-Zuweisung;
 
 
 let arr = [ 1, 2, 3 ]
@@ -200,7 +201,7 @@ Variablen-Tausch:
 Die einfachste Möglichkeit um Variablen zu vertauschen.
 
 
-11.  Variable aus Objekt-Zuweisung:
+- Variable aus Objekt-Zuweisung:
 
 
 function getSpecObj() {
@@ -228,7 +229,7 @@ let { name1: i, name2: j, name3: { name4: x } } = getSpecObj() // Ausgabe Variab
 Die Variablen mit dem Namen i, j und x werden mit den Werten aus dem Objekt durch Zuweisung der Objekt-Namen erzeugt.
 
 
-12.  Variable aus Objekt- und Array-Zuweisung mit Standard-Parametern:
+- Variable aus Objekt- und Array-Zuweisung mit Standard-Parametern:
 
 
 Objekt-Zuweisung:
@@ -250,7 +251,7 @@ let [ x, y = 2, z ] = arr // Ausgabe Variable x = 1, y = 2, z = undefined
 Die Variablen mit dem Namen x und y werden mit den Werten aus dem Array erzeugt. y wird standardmäßig mit dem Wert 2 belegt, wenn das Array keinen Wert mit demselben Index besitzt.
 
 
-13.  Objekt- und Array Zuweisung als Parameter einer Funktion:
+- Objekt- und Array Zuweisung als Parameter einer Funktion:
 
 
 Parameter als Array:
@@ -295,7 +296,7 @@ func3({ param1: 1, param2: 2 });
 Es werden die Werte nach der Zuweisung im Objekt der Variable param1 = 1 und param2 = 2 übergeben
 
 
-14.  Klassen:
+- Klassen:
 
 
 class className {
@@ -353,7 +354,7 @@ Statische Methoden werden über das Schlüsselwort "static" definiert.
 Getter und Setter werden über die Wörter "get" und "set" gesetzt.
 
 
-15.  Sets:
+- Sets:
 
 
 const s = new Set()
@@ -383,7 +384,7 @@ for(let key of s.values()) {
 }
 
 
-16.  Maps:
+- Maps:
 
 
 let m = new Map()
@@ -413,7 +414,7 @@ for(let[key, val] of m.entries()) {
 }
 
 
-17.  Neuere Methoden:
+- Neuere Methoden:
 
 Objekte zusammenfügen:
 
@@ -477,7 +478,7 @@ Abschneiden der Nachkommastellen:
 Math.trunc(99.9)) // 99
 
 
-18.  Promises - Asynchroner Aufruf von Methoden bei Rückgabe:
+- Promises - Asynchroner Aufruf von Methoden bei Rückgabe:
 
 
 function msgAfterTimeout(nachricht, name, timeout) {
@@ -542,7 +543,7 @@ Promise.all([
 })
 
 
-19.  Proxys - Dynamischer Aufruf und entsprechende Rückgabe in Objekt-Schreibweise:
+- Proxys - Dynamischer Aufruf und entsprechende Rückgabe in Objekt-Schreibweise:
 
 let target = {
 
@@ -565,7 +566,7 @@ proxy.test // Ausgabe "Willkommen, test"
 proxy.maxmustermann // Ausgabe "Nicht bekannt: maxmustermann"
 
 
-20.  Reflection - Dynamischer Aufruf und entsprechende Rückgabe in Objekt-Schreibweise (ähnlich der Proxys):
+- Reflection - Dynamischer Aufruf und entsprechende Rückgabe in Objekt-Schreibweise (ähnlich der Proxys):
 
 
 let obj = { a: 1 }
@@ -585,7 +586,7 @@ console.log(Reflect.ownKeys(obj)) // Ausgabe [ 'a', 'b', 'c' ]
 PHP 7 / 7.1 / 7.2 Updates
 
 
-1. Sortieren von Arrays:
+- Sortieren von Arrays:
 
 
 Der <=> Operator erspart einem eine komplette Überprüfung oder Vergleiche auf <, =, und >..
@@ -603,7 +604,7 @@ usort($arr, function($a, $b) {
 
 
 
-2. Holen der Request-Werte (POST, GET etc.):
+- Holen der Request-Werte (POST, GET etc.):
 
 
 $userId = $_POST['ID_User'] ?? $_GET['ID_User'] ?? 'System kennt den User nicht!';
@@ -612,7 +613,7 @@ $userId = $_POST['ID_User'] ?? $_GET['ID_User'] ?? 'System kennt den User nicht!
 Hierbei werden auch keine Fehler beim direkten Zugriff aus $_POST geschmissen.
 
 
-3. Anonyme Klassen:
+- Anonyme Klassen:
 
 
 class User {
@@ -640,7 +641,7 @@ $maxMustermann = new class('Max Mustermann') extends User {
 echo $maxMustermann->hallo();
 
 
-4. Typdeklarationen
+- Typdeklarationen
 
 
 function ausgabe(string $wert): string {
@@ -656,7 +657,7 @@ seit PHP 7.1 auch 'void' : Keine Rückgabe
 seit PHP 7.2 auch 'object' möglich
 
 
-5. Fehlerbehandlung
+- Fehlerbehandlung
 
 
 try {
@@ -709,13 +710,13 @@ alternativ:
 
 //..
 
-6. Zufallsfunktion
+- Zufallsfunktion
 
 
 echo random_int(1, 100);
 
 
-7. Parameter bei session_start direkt möglich (unterschiedliches Session-Handling möglich)
+- Parameter bei session_start direkt möglich (unterschiedliches Session-Handling möglich)
 
 
 session_start([
@@ -725,7 +726,7 @@ session_start([
 ]);
 
 
-8. Definition von Array Konstanten
+- Definition von Array Konstanten
 
 
 define('SETTINGS', [
@@ -739,7 +740,7 @@ define('SETTINGS', [
 
 echo SETTINGS['setting1'];
 
-9. Zugriffe auf Daten
+- Zugriffe auf Daten
 
 
 $data = [
@@ -757,7 +758,7 @@ echo $a;
 echo $b;
 
 
-10. Zugriff auf beliebige String-Positionen
+- Zugriff auf beliebige String-Positionen
 
 
 $string[-1] // => das letzte Zeichen usw.
