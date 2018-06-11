@@ -53,7 +53,7 @@ arr.forEach(i => {
 
    if(i < 3)
    
-       console.log(i); // Issue 1, 2
+       console.log(i); // result 1, 2
 
 });
 
@@ -79,7 +79,7 @@ function func(i, j, ...name) {
 
 Call:
 
-func(1, 2, 3, 4) // Issue 5
+func(1, 2, 3, 4) // result 5
 
 Remaining parameters can be called directly in a function using a specified name as an array.
 
@@ -104,7 +104,7 @@ function func(i, j, ...name) {
 
 Call:
 
-func(1, 2, ...arr1) // Issue 6
+func(1, 2, ...arr1) // result 6
 
 Here the values of the array [ 1, 2, 3 ] are passed directly to the remaining parameter of the function.
 
@@ -378,7 +378,7 @@ Scroll through a set in the order of insertion:
 
 for(let key of s.values()) {
 
-    console.log(key) // Issue 1, 2
+    console.log(key) // result 1, 2
 
 }
 
@@ -398,7 +398,7 @@ console.log(m.get('test')); // Output 1
 
 Output of map size:
 
-console.log(m.size) // Issue 1
+console.log(m.size) // result 1
 
 Remove the value from the map using the key:
 
@@ -430,9 +430,9 @@ Objects can be merged using Object.assign()
 
 Array search:
 
-[ 1, 3, 4, 2 ].find(x => x > 3) // Issue 4
+[ 1, 3, 4, 2 ].find(x => x > 3) // result 4
 
-[ 1, 3, 4, 2 ].findIndex(x => x > 3) // Issue 2
+[ 1, 3, 4, 2 ].findIndex(x => x > 3) // result 2
 
 
 String repetition:
@@ -562,7 +562,7 @@ let proxy = new Proxy(target, {
 
 proxy.test // Output "Welcome, test"
 
-proxy.maxmustermann // Issue "Not known: maxmustermann"
+proxy.maxmustermann // result "Not known: maxmustermann"
 
 
 Reflection - Dynamic call and corresponding return in object notation (similar to proxies):
