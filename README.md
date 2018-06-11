@@ -767,8 +767,7 @@ strpos($string, 'a', -2) // => count from the back from position 2 etc.
 
 
 
-___________________
-
+<hr />
 
 
 
