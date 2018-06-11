@@ -1,3 +1,7 @@
+/*
+	JS Simple Elements Helper Class with usefull functions
+	author: David Kempf
+*/
 /*** ui elements class ***/
 export default class UIElements {
   /*** create elements ***/
