@@ -579,14 +579,14 @@ console.log(Reflect.ownKeys(obj)) // Output [ 'a', 'b', 'c' ]
 
 
 
-
+<hr />
 
 
 
 PHP 7 / 7.1 / 7.2 Updates
 
 
-Sorting of arrays:
+- Sorting of arrays:
 
 
 The <=> operator saves you a complete check or comparison for <, =, and >...
@@ -604,7 +604,7 @@ aar => 1, 2, 3
 
 
 
-Get request values (POST, GET, etc.):
+- Get request values (POST, GET, etc.):
 
 
 $userId = $_POST['ID_User']? $_GET['ID_User']? System does not know the user!';
@@ -612,7 +612,7 @@ $userId = $_POST['ID_User']? $_GET['ID_User']? System does not know the user!';
 No errors are thrown during direct access from $_POST.
 
 
-Anonymous classes:
+- Anonymous classes:
 
 
 class User {
@@ -640,7 +640,7 @@ $maxMustermann = new class('Max Mustermann') extends User {
 echo $maxMustermann->hello();
 
 
-Type declarations
+- Type declarations:
 
 
 function output(string $value): string {
@@ -656,7 +656,7 @@ since PHP 7.1 also'void': No return value
 since PHP 7.2 also 'object' possible
 
 
-error handling
+- Error handling:
 
 
 try {
@@ -709,13 +709,15 @@ catch(Throwable) { // catches exception and error and all throwables
 
 //..
 
-Random function
+- Random function:
 
 
 echo random_int(1, 100);
 
 
-Parameters at session_start directly possible (different session handling possible)
+- Parameters at session_start 
+
+(different session handling possible)
 
 
 session_start([
@@ -725,7 +727,7 @@ session_start([
 ]);
 
 
-Definition of array constants
+- Definition of array constants:
 
 
 define('SETTINGS', [
@@ -739,7 +741,7 @@ define('SETTINGS', [
 
 echo SETTINGS['setting1'];
 
-Access to data
+- Access to data:
 
 
 $data = [
@@ -757,7 +759,7 @@ echo $a;
 echo $b;
 
 
-Access to any string positions
+- Access to any string positions:
 
 
 $string[-1] // => the last character etc.
