@@ -1,5 +1,8 @@
 <?php
-
+/*
+	PHP DB Install Script Class
+	author: David Kempf
+*/
 // Define path to application directory
 defined('INSTALL_SCRIPT_PATH') || define('INSTALL_SCRIPT_PATH', realpath(dirname(__FILE__)));
 
