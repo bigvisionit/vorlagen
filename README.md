@@ -1,6 +1,6 @@
 New Features PHP 7.0, 7.1, 7.2 and ES 6 / 7
 
-(scroll down to read german version)
+( scroll down to read german version )
 
 ES6 / ES7 Updates
 
