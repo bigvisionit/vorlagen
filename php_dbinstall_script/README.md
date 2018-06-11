@@ -1,6 +1,6 @@
-# DB Install Script (PHP)
+# DB Install Script (PHP & MySql)
 
-This is a db install script written in PHP.
+This is a MySql install script written in PHP.
 
 It can be used in projects to install sql scripts.
 
