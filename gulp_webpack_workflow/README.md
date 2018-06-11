@@ -2,10 +2,61 @@
 
 It uses webpack, gulp, babel and webpack-dev-server to compile and serve.
 
+It can be used for multiple projects separated by modules.
+
+Tasks running from gulp and webpack:
+
+- copy all HTML files into build
+
+- copy all IMAGE files into build
+
+- copy BOOTSTRAP and transpile into build
+
+- merge & transpile all SASS files into build
+
+- copy and merge JS files into build
+
+- generates live preview and open in a browser
+
+- watch IMAGES, BOOTSTRAP, STYLES and JS files and serve them to browser
+
+
 ### Version
 0.0.1
 
 ## Usage
+
+Multiple projects must be separated by modules.
+
+Create a new module by adding a folder (beginning with 001, 002 .. 999).
+
+module 1: src/001
+
+module 2: src/002
+
+...
+
+Just import in src/index.js the modules:
+
+import module_001 from './001/js/module';
+
+import module_002 from './002/js/module';
+
+...
+
+every module has folders:
+
+- images/001
+
+- js
+	module.js (should be in js)
+	
+- style
+	module.scss (should be in style)
+
+to import custom JS files or libraries just use: import MyClass from './MyClass'; in your module.js
+
+to import custom SASS files just use: @import "variables"; in your module.scss
 
 ### Installation
 
