@@ -195,7 +195,7 @@ The variables named x and y are generated with the values from the array.
 
 Variable swap:
 
-][x, y =[y, x]
+[x, y] =[y, x]
 
 The easiest way to swap variables.
 
