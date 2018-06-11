@@ -292,6 +292,473 @@ function func3({ param1, param2 }) {
 
 func3({ param1: 1, param2: 2 });
 
-E flat 
+After the assignment, the values are transferred in the object of the variables param1 = 1 and param2 = 2.
 
-Translated with www.DeepL.com/Translator
+
+Classes:
+
+
+class className {
+
+    constructor(i, j) {
+
+        this._i = i
+
+        this.j = j
+
+        this.increment()
+
+    }
+
+    set i(i) { this._i = i }
+
+    get i() { return this._i }
+
+    increment() {
+
+        this._i++;
+
+        this._j++;
+
+    }
+
+    static func() {
+
+        //do something..
+
+    }
+
+}
+
+class className2 extends className {
+
+    constructor(i, j) {
+
+        super(i, j)
+
+    }
+
+}
+
+Call:
+
+const myObj = new className(1, 1); // Output myObj.i = 1
+
+Classes can be created using the word "class". constructor is created using the word "constructor".
+
+Inheritance is specified by the word "extends" and the call of the superclass by the word "super".
+
+Static methods are defined using the keyword "static".
+
+Getter and Setter are set using the words "get" and "set".
+
+
+Sets:
+
+
+const s = new Set()
+
+s.add(1).add(2) // Add values
+
+Sets can contain any values and are always stored sorted
+
+Output of the set size:
+
+console.log(s.size)
+
+Check for the presence of a value:
+
+console.log(s.has(2)) // Output true
+
+Remove value from the set:
+
+s.delete(2);
+
+Scroll through a set in the order of insertion:
+
+for(let key of s.values()) {
+
+    console.log(key) // Issue 1, 2
+
+}
+
+
+Maps:
+
+
+let m = new Map()
+
+m.set("test", 1) // Assign the value 1 to the "test" key
+
+Maps can contain any values and are set via a key
+
+Output of a value via the key:
+
+console.log(m.get('test')); // Output 1
+
+Output of map size:
+
+console.log(m.size) // Issue 1
+
+Remove the value from the map using the key:
+
+m.delete("test");
+
+Scrolling through a map:
+
+for(let[key, val] of m.entries()) {
+
+    console.log(key + " " = " + val)
+
+}
+
+
+Newer methods:
+
+Merge objects:
+
+var obj1 = { prop1: 1 }
+
+var obj2 = { prop2: 2, prop3: 3 }
+
+var obj3 = { prop3: 4, prop5: 5 }
+
+Object.assign(obj1, obj2, obj3) // Output { prop1: 1, prop2: 2, prop3: 4, prop5: 5 }
+
+Objects can be merged using Object.assign()
+
+
+Array search:
+
+[ 1, 3, 4, 2 ].find(x => x > 3) // Issue 4
+
+[ 1, 3, 4, 2 ].findIndex(x => x > 3) // Issue 2
+
+
+String repetition:
+
+"test".repeat(3) // Output "testtesttest"
+
+
+String search:
+
+"hello".includes("ell") // Output "true"
+
+"hello".includes("ell", 1) // Parameter 2 = Index, Output "true"
+
+ 
+String startsWith and endsWith:
+
+ 
+"hello".startsWith("ello", 1) // Parameter 2 = Index, Output true
+
+"hello".endsWith("hello", 4) // Parameter 2 = Index, Output "true"
+
+ 
+
+NaN and finite test:
+
+
+Number.isNaN(NaN) // Output "true".
+
+Number.isFinite(NaN) // Output "false
+
+
+Check for secure integers within the validity range:
+
+
+Number.isSafeInteger(1) // Output true
+
+Number.isSafeInteger(9007199254740992) // Output "false
+
+
+Truncate the decimal places:
+
+Math.trunc(99.9)) // 99
+
+
+Promises - Asynchronous call of methods on return:
+
+
+function msgAfterTimeout(message, name, timeout) {
+
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => resolve(`${message} Hello ${name}!`), timeout)
+
+    })
+
+}
+
+msgAfterTimeout("", "Hans", 100).then((message) =>
+
+		msgAfterTimeout(message, "sausage", 200)
+
+	).then((message) => {
+
+		console.log(`done after 300ms:${message}`)
+
+	}
+
+)
+
+
+Combine several celebrities:
+
+function fetchAsync(url, timeout, onData, onError) {
+
+    …
+
+}
+
+let fetchPromised = (url, timeout) => {
+
+    return new Promise((resolve, reject) => {
+
+        fetchAsync(url, timeout, resolve, reject)
+
+    })
+
+}
+
+Promise.all([
+
+    fetchPromised("url1", 500),
+
+    fetchPromised("url2", 500),
+
+    fetchPromised("url3", 500)
+
+]).then((data) => {
+
+    let [ data1, data2, data3  = data
+
+    console.log(`success: data1=${data1} data2=${data2} data3=${data3}`)
+
+}, (err) => {
+
+   console.log(`error: ${err}`)
+
+})
+
+
+Proxies - Dynamic call and corresponding return in object notation:
+
+let target = {
+
+    test: "Welcome, test"
+
+}
+
+let proxy = new Proxy(target, {
+
+    get(receiver, name) {
+
+        return name in receiver ? receiver[name] `Not known: ${name}`
+
+    }
+
+})
+
+proxy.test // Output "Welcome, test"
+
+proxy.maxmustermann // Issue "Not known: maxmustermann"
+
+
+Reflection - Dynamic call and corresponding return in object notation (similar to proxies):
+
+
+let obj = { a: 1 }
+
+Object.defineProperty(obj, 'b', { value: 2 }))
+
+obj['c'] = 3
+
+console.log(Reflect.ownKeys(obj)) // Output [ 'a', 'b', 'c' ]
+
+
+
+
+
+
+
+PHP 7 / 7.1 / 7.2 Updates
+
+
+Sorting of arrays:
+
+
+The <=> operator saves you a complete check or comparison for <, =, and >...
+
+
+$arr = array(1,3,2);
+
+usort($arr, function($a, $b) {
+
+    return $a <=> $b;
+
+});
+
+aar => 1, 2, 3
+
+
+
+Get request values (POST, GET, etc.):
+
+
+$userId = $_POST['ID_User']? $_GET['ID_User']? System does not know the user!';
+
+No errors are thrown during direct access from $_POST.
+
+
+Anonymous classes:
+
+
+class User {
+
+	public $name;
+
+	public function hello() {
+
+				   echo 'Hello ' . $this->name;
+
+	}
+
+}
+
+$maxMustermann = new class('Max Mustermann') extends User {
+
+	public function __construct($name) {
+
+				   $this->name = $name;
+
+	}
+
+};
+
+echo $maxMustermann->hello();
+
+
+Type declarations
+
+
+function output(string $value): string {
+
+    echo $value;
+
+}
+
+since PHP 7.1 also '?data type': value can also be zero
+
+since PHP 7.1 also'void': No return value
+
+since PHP 7.2 also 'object' possible
+
+
+error handling
+
+
+try {
+
+    Calling an unknown function
+
+    unknownfunction();
+
+catch(Exception $e) {
+
+    not executed in PHP 5.6!
+
+    not executed in PHP 7 because of type'Error
+
+} catch(Error $e) {
+
+    executed in PHP 7
+
+    does not exist in PHP 5.6.
+
+} finally {
+
+    not executed in PHP 5.6!
+
+    executed in PHP 7
+
+}
+
+alternative:
+
+//..
+
+catch(Exception | Error $e) { // catches exception and error
+
+    //..
+
+}
+
+//..
+
+//..or...
+
+//..
+
+catch(Throwable) { // catches exception and error and all throwables
+
+    //..
+
+}
+
+//..
+
+Random function
+
+
+echo random_int(1, 100);
+
+
+Parameters at session_start directly possible (different session handling possible)
+
+
+session_start([
+
+    cookie_lifetime' => 86400
+
+]);
+
+
+Definition of array constants
+
+
+define('SETTINGS', [
+
+    'setting1' => '1',
+
+    setting2' => '2'
+
+]);
+
+
+echo SETTINGS['setting1'];
+
+Access to data
+
+
+$data = [
+
+    'c' => 1,
+
+    'd' => 2
+
+];
+
+['c' => $a, 'd' => $b] = $data;
+
+echo $a;
+
+echo $b;
+
+
+Access to any string positions
+
+
+$string[-1] // => the last character etc.
+
+strpos($string, 'a', -2) // => count from the back from position 2 etc.
