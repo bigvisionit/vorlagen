@@ -1,3 +1,8 @@
+/*
+	JS Simple Modern Http Helper Class with usefull functions
+	author: David Kempf
+*/
+
 /*** http class ***/
 export default class ModernHttp {
   // GET Request (JSON)
