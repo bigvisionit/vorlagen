@@ -183,7 +183,7 @@ Output: { i: 1, i123: 2 }
 Object properties can be named dynamically using [].
 
 
-- Variable from array assignment;
+- Variable from array assignment:
 
 
 let arr = [ 1, 2, 3 ]
