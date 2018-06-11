@@ -18,7 +18,7 @@ Functions overview:
 
 - put data function to url, returns json
 
-- delete data function to urk, returns json
+- delete data function to url, returns json
 
 
 ### Version
@@ -31,3 +31,9 @@ Functions overview:
 const http = new ModernHttp();
 
 http.get('users').then(data => console.log(data)).catch(err => console.log(err));
+
+
+// simple post request
+
+const username = 'max';
+http.post('users/add', { username }).then(data => console.log(data)).catch(err => console.log(err));
