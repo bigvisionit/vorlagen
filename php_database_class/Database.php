@@ -29,7 +29,8 @@ class Database {
 		$options = array (
 			// set PDO::ATTR_PERSISTENT = true if you want a persistent connection
 			PDO::ATTR_PERSISTENT => false,
-			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION 
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
 		);
 		try {
 			// connect to database
