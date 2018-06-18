@@ -30,10 +30,15 @@ Add the budle to composer.json:
 composer.json
 
 ..
+
 "autoload": {
+
     "psr-4": {
+	
         "CompanyName\\NameBundle\\": "src/CompanyName/NameBundle",
+		
     }
+	
 ..
 
 run console: composer update
@@ -43,6 +48,8 @@ Add Template Path to Bundle-Folder if needed:
 app/config/config.yaml
 
 twig:
-    paths: 
+
+    paths:
+	
         '%kernel.project_dir%/src/CompanyName/NameBundle/Resources/views': NameBundle
 
