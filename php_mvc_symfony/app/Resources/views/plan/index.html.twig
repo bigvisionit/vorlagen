@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h2 class="page-header">Aktueller Plan (Dienstplan)</h2>
+
+<table class=" table table-striped">
+
+<thead>
+
+<tr>
+
+<th>Wer</th>
+
+<th>Wo</th>
+
+<th>Wann</th>
+
+<th>&nbsp;</th>
+
+</thead>
+
+<tbody>
+
+{% for entry in plan %}
+
+<tr>
+
+  <td>{{ entry.name }}</td>
+
+  <td>{{ entry.place }}</td>
+
+  <td>{{ entry.date | date('F j, Y g:i')}}</td>
+
+  <td>
+
+    <a href="{{ path('details', { 'id': entry.id })}}" class="btn btn-primary">Details</a>
+
+    <a href="{{ path('edit', { 'id': entry.id })}}" class="btn btn-primary">Ändern</a>
+
+    <a href="{{ path('delete',{ 'id': entry.id })}}" class="btn btn-primary">Löschen</a>
+
+  </td>
+
+</tr>
+
+<tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{{ include('plan/add_info.html.twig') }}
+
+{% endblock %}
+
+{% block stylesheets %} <link href="{{ asset('plan.css')}}" rel="stylesheet">{% endblock %}
+
+

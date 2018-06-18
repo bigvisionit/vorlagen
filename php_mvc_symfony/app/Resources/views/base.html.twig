@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
+
+    <meta name="description" content="">
+
+    <meta name="author" content="">
+
+    <title>{% block title %}Welcome!{% endblock %}</title>
+
+    <!-- Bootstrap-CSS -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    {% block stylesheets %} {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="container">
+
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+            <span class="sr-only">Navigation ein-/ausblenden</span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+          </button>
+
+          <a class="navbar-brand" href="#">Plan</a>
+
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+
+          <ul class="nav navbar-nav">
+
+            <li><a href="{{ path ('start')}}">Start</a></li>
+
+            <li><a href="{{ path ('add')}}">Neuer Eintrag</a></li>
+
+          </ul>
+
+        </div><!--/.nav-collapse -->
+
+      </div>
+
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                 {% block body %}{% endblock %}
+
+            </div>
+
+        </div>
+
+    </div><!-- /.container -->
+
+    {% block javascripts %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    {% endblock %}
+
+    <!-- Bootstrap-JavaScript ================================================== -->
+
+    <!-- Am Ende des Dokuments platziert, damit Seiten schneller laden -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  </body>
+  
+</html>
+
+{# empty content template
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8" />
+
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        {% block stylesheets %}{% endblock %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    </head>
+
+    <body>
+
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+
+    </body>
+    
+</html>
+#}

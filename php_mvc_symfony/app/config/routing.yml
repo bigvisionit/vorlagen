@@ -1,0 +1,13 @@
+plan_plan:
+    resource: "@PlanPlanBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+master_module:
+    resource: "@MasterModuleBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

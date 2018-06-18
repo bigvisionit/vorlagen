@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+ {% block body %}
+
+     <h2 class="page-header">{{ plan.name }} </h2>
+
+     <ul class="list-group ">
+
+         <li class="list-group-item">Name: {{ plan.name }}</li>
+
+         <li class="list-group-item">Ort: {{ plan.place }}</li>
+
+         <li class="list-group-item">Datum: {{ plan.date | date('F j, Y g:i') }}</li>
+
+     </ul>
+
+ {% endblock %}    
+
