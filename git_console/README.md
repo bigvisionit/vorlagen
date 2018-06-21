@@ -6,11 +6,11 @@ Repository aus der URL holen:
 
 Repository kopieren mit Historie (kopiert samt Hauptordner):
 
-git clone url.git
+### git clone url.git
 
 Repository kopieren ohne Historie (kopiert nur Inhalt):
 
-git pull url.git
+### git pull url.git
 
 --
 
@@ -18,11 +18,11 @@ Repository neu anlegen:
 
 Eingabe ändern git>:
 
-prompt git$g
+### prompt git$g
 
 Repository erstellen:
 
-git init
+### git init
 
 --
 
@@ -30,31 +30,31 @@ Dateien im Repository hinzufügen / löschen / umbenennen:
 
 Datei hinzufügen:
 
-git add dateiname
+### git add dateiname
 
-git commit -m "commit message"
+### git commit -m "commit message"
 
 Alle Dateien hinzufügen (-u nur geänderte):
 
-git add -a
+### git add -a
 
-git commit -m "commit messaqe"
+### git commit -m "commit messaqe"
 
 oder
 
-git commit -a -m "commit message"
+### git commit -a -m "commit message"
 
 Datei löschen (-r Ordner):
 
-git rm dateiname
+### git rm dateiname
 
-git commit -m "commit messaqe"
+### git commit -m "commit messaqe"
 
 Datei umbenennen:
 
-git mv dateiname neuername
+### git mv dateiname neuername
 
-git commit -m "commit message"
+### git commit -m "commit message"
 
 --
 
@@ -62,19 +62,19 @@ Repository URL hinzufügen:
 
 Repository hinzufügen:
 
-git remote add origin url.git
+### git remote add origin url.git
 
 Gebe alle Repositories aus:
 
-git remote -v
+### git remote -v
 
 Entferne Repository:
 
-git remote remove origin
+### git remote remove origin
 
 Benenne Repository um:
 
-git remote rename origin neworigin
+### git remote rename origin neworigin
 
 --
 
@@ -82,7 +82,7 @@ Pushen:
 
 Auf den Master Branch (URL origin) puschen:
 
-git push origin master
+### git push origin master
 
 --
 
@@ -90,11 +90,11 @@ Pullen:
 
 Änderungen (URL origin) pullen:
 
-git pull origin
+### git pull origin
 
 Aus den Master Branch (URL origin) pullen:
 
-git pull origin master
+### git pull origin master
 
 --
 
@@ -102,57 +102,57 @@ Branches erstellen / löschen / ausgeben / wechseln:
 
 Branch erstellen:
 
-git branch name
+### git branch name
 
 Branch löschen:
 
-git branch -d
+### git branch -d
 
 Alle Branches ausgeben:
 
-git branch -a
+### git branch -a
 
 Alle Remote Branches ausgeben:
 
-git branch -r
+### git branch -r
 
 Branch wechseln:
 
-git checkout name
+### git checkout name
 
 Branch erstellen und wechseln:
 
-git checkout -b name
+### git checkout -b name
 
 --
 
 Tags (lokaler Stand) erstellen:
 
-git tag name
+### git tag name
 
 --
 
 Remote Branche herunterladen (URL origin):
 (Änderungen sehen ohne diese zu übernehmen)
 
-git fetch origin
+### git fetch origin
 
 --
 
 Rebase (Commit Historie von Branches anwenden):
 
-git rebase -i --onto master remote/master
+### git rebase -i --onto master remote/master
 
 --
 
 Stash (Sicherung vom Stand) erstellen:
 
-git stash push -m "stash message"
+### git stash push -m "stash message"
 
 Stash Sicherungen anzeigen:
 
-git stash pop
+### git stash pop
 
 Stash Sicherung holen:
 
-git stash pop
+### git stash pop
