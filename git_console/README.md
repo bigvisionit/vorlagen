@@ -1,158 +1,207 @@
-Git - Befehle
+# Git - Befehle
 
---
 
-Repository aus der URL holen:
+# Repository aus der URL holen:
 
-Repository kopieren mit Historie (kopiert samt Hauptordner):
+### Repository kopieren mit Historie (kopiert samt Hauptordner):
 
-### git clone url.git
+```
+git clone url.git
+```
 
-Repository kopieren ohne Historie (kopiert nur Inhalt):
+### Repository kopieren ohne Historie (kopiert nur Inhalt):
 
-### git pull url.git
+```
+git pull url.git
+```
 
---
 
-Repository neu anlegen:
+# Repository neu anlegen:
 
-Eingabe ändern git>:
+### Eingabe ändern git>:
 
-### prompt git$g
+```
+prompt git$g
+```
 
-Repository erstellen:
+### Repository erstellen:
 
-### git init
+```
+git init
+```
 
---
 
-Dateien im Repository hinzufügen / löschen / umbenennen:
+# Dateien im Repository hinzufügen / löschen / umbenennen:
 
-Datei hinzufügen:
+### Datei hinzufügen:
 
-### git add dateiname
+```
+git add dateiname
+```
+```
+git commit -m "commit message"
+```
 
-### git commit -m "commit message"
+### Alle Dateien hinzufügen (-u nur geänderte):
 
-Alle Dateien hinzufügen (-u nur geänderte):
-
-### git add -a
-
-### git commit -m "commit messaqe"
+```
+git add -a
+```
+```
+git commit -m "commit messaqe"
+```
 
 oder
 
-### git commit -a -m "commit message"
+```
+git commit -a -m "commit message"
+```
 
-Datei löschen (-r Ordner):
+### Datei löschen (-r Ordner):
 
-### git rm dateiname
+```
+git rm dateiname
+```
+```
+git commit -m "commit messaqe"
+```
 
-### git commit -m "commit messaqe"
+### Datei umbenennen:
 
-Datei umbenennen:
+```
+git mv dateiname neuername
+```
+```
+git commit -m "commit message"
+```
 
-### git mv dateiname neuername
 
-### git commit -m "commit message"
+# Repository URL hinzufügen:
 
---
+### Repository hinzufügen:
 
-Repository URL hinzufügen:
+```
+git remote add origin url.git
+```
 
-Repository hinzufügen:
+### Gebe alle Repositories aus:
 
-### git remote add origin url.git
+```
+git remote -v
+```
 
-Gebe alle Repositories aus:
+### Entferne Repository:
 
-### git remote -v
+```
+git remote remove origin
+```
 
-Entferne Repository:
+### Benenne Repository um:
 
-### git remote remove origin
+```
+git remote rename origin neworigin
+```
 
-Benenne Repository um:
 
-### git remote rename origin neworigin
+# Pushen:
 
---
+### Auf den Master Branch (URL origin) puschen:
 
-Pushen:
+```
+git push origin master
+```
 
-Auf den Master Branch (URL origin) puschen:
 
-### git push origin master
+# Pullen:
 
---
+### Änderungen (URL origin) pullen:
 
-Pullen:
+```
+git pull origin
+```
 
-Änderungen (URL origin) pullen:
+### Aus den Master Branch (URL origin) pullen:
 
-### git pull origin
+```
+git pull origin master
+```
 
-Aus den Master Branch (URL origin) pullen:
 
-### git pull origin master
+# Branches erstellen / löschen / ausgeben / wechseln:
 
---
+### Branch erstellen:
 
-Branches erstellen / löschen / ausgeben / wechseln:
+```
+git branch name
+```
 
-Branch erstellen:
+### Branch löschen:
 
-### git branch name
+```
+git branch -d
+```
 
-Branch löschen:
+### Alle Branches ausgeben:
 
-### git branch -d
+```
+git branch -a
+```
 
-Alle Branches ausgeben:
+### Alle Remote Branches ausgeben:
 
-### git branch -a
+```
+git branch -r
+```
 
-Alle Remote Branches ausgeben:
+### Branch wechseln:
 
-### git branch -r
+```
+git checkout name
+```
 
-Branch wechseln:
+### Branch erstellen und wechseln:
 
-### git checkout name
+```
+git checkout -b name
+```
 
-Branch erstellen und wechseln:
 
-### git checkout -b name
+# Tags (lokaler Stand) erstellen:
 
---
+```
+git tag name
+```
 
-Tags (lokaler Stand) erstellen:
 
-### git tag name
-
---
-
-Remote Branche herunterladen (URL origin):
+# Remote Branche herunterladen (URL origin):
 (Änderungen sehen ohne diese zu übernehmen)
 
-### git fetch origin
+```
+git fetch origin
+```
 
---
 
-Rebase (Commit Historie von Branches anwenden):
+# Rebase (Commit Historie von Branches anwenden):
 
-### git rebase -i --onto master remote/master
+```
+git rebase -i --onto master remote/master
+```
 
---
 
-Stash (Sicherung vom Stand) erstellen:
+# Stash (Sicherung vom Stand) erstellen:
 
-### git stash push -m "stash message"
+```
+git stash push -m "stash message"
+```
 
-Stash Sicherungen anzeigen:
+### Stash Sicherungen anzeigen:
 
-### git stash pop
+```
+git stash pop
+```
 
-Stash Sicherung holen:
+### Stash Sicherung holen:
 
-### git stash pop
+```
+git stash pop
+```
