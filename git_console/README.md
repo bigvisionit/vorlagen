@@ -1,4 +1,4 @@
-# Git - Befehle
+# Git - Commands (German)
 
 
 # Repository aus der URL holen:
