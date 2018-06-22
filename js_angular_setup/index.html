@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Angular Setup</title>
+  
+  <!--polyfills-->
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  
+  <!--vendor-->
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  
+  <script>
+        System.import('system.config.js').then(function() {
+            System.import('app');
+        }).catch(function(err) {
+            console.error(err);
+        });
+  </script>
+  
+</head>
+<body>
+  
+</body>
+</html>

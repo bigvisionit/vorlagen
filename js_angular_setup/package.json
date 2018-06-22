@@ -1,0 +1,49 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Angular Setup with node and systemjs",
+  "main": "index.js",
+  "scripts": {
+	"start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+	"tsc:w": "tsc -w",
+    "typings": "typings",
+	"lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidkempf/vorlagen.git"
+  },
+  "keywords": [
+    "Angular",
+    "Setup"
+  ],
+  "author": "David Kempf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidkempf/vorlagen/issues"
+  },
+  "homepage": "https://github.com/davidkempf/vorlagen#readme",
+  "devDependencies": {
+    "concurrently": "^3.6.0",
+    "lite-server": "^2.3.0",
+    "typescript": "^2.9.2",
+    "typings": "^2.1.1"
+  },
+  "dependencies": {
+    "@angular/common": "^6.0.6",
+    "@angular/compiler": "^6.0.6",
+    "@angular/core": "^6.0.6",
+    "@angular/http": "^6.0.6",
+    "@angular/platform-browser": "^6.0.6",
+    "@angular/platform-browser-dynamic": "^6.0.6",
+    "@angular/router": "^6.0.6",
+    "core-js": "^2.5.7",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^6.2.1",
+    "systemjs": "^0.21.4",
+    "zone.js": "^0.8.26"
+  }
+}
