@@ -1,18 +1,18 @@
-New Features PHP 7.0, 7.1, 7.2 and ES 6 / 7
+# New Features PHP 7.0, 7.1, 7.2 and ES 6 / 7
 
 ( scroll down to read german version )
 
-ES6 / ES7 Updates
+# ES6 / ES7 Updates
 
 
 ## Let variables:
-
+```
 for(let i = 0; i < 10; i++) {
-
+``````
     let x = i // x and i are only valid within the for loop
-
+``````
 }
-
+```
 Var - variables x and i would still be present after the loop, which is not wanted!
 
 
