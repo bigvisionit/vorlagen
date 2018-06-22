@@ -8,9 +8,9 @@
 ## Let variables:
 ```
 for(let i = 0; i < 10; i++) {
-``````
+
     let x = i // x and i are only valid within the for loop
-``````
+
 }
 ```
 Var - variables x and i would still be present after the loop, which is not wanted!
