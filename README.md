@@ -1,8 +1,8 @@
-# New Features PHP 7.0, 7.1, 7.2 and ES 6 / 7
+## New Features PHP 7.0, 7.1, 7.2 and ES 6 / 7
 
 ( scroll down to read german version )
 
-# ES6 / ES7 Updates
+## ES6 / ES7 Updates
 
 
 ## Let variables:
@@ -582,7 +582,7 @@ console.log(Reflect.ownKeys(obj)) // Output [ 'a', 'b', 'c' ]
 
 
 
-# PHP 7 / 7.1 / 7.2 Updates
+## PHP 7 / 7.1 / 7.2 Updates
 
 
 ## Sorting of arrays:
@@ -777,11 +777,11 @@ Deutsche Version:
 (German Version)
 
 
-# New Features PHP 7.0, 7.1, 7.2 and ES 6/7
+## New Features PHP 7.0, 7.1, 7.2 and ES 6/7
 
 (German)
 
-# ES6 / ES7 Updates
+## ES6 / ES7 Updates
 
 
 ## let - Variablen:
