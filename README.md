@@ -5,7 +5,7 @@ New Features PHP 7.0, 7.1, 7.2 and ES 6 / 7
 ES6 / ES7 Updates
 
 
-- Let variables:
+## Let variables:
 
 for(let i = 0; i < 10; i++) {
 
@@ -16,7 +16,7 @@ for(let i = 0; i < 10; i++) {
 Var - variables x and i would still be present after the loop, which is not wanted!
 
 
-- Constants:
+## Constants:
 
 
 const element = document.querySelector('#elementId');
@@ -29,7 +29,7 @@ All HTML elements, objects, arrays or fixed values should be defined as a consta
 Objects and arrays can also be changed afterwards, but may not be created from scratch, which makes sense.
 
 
-- Arrow functions:
+## Arrow functions:
 
 
 Simple function:
@@ -59,7 +59,7 @@ arr.forEach(i => {
 });
 
 
-- Default parameters:
+## Default parameters:
 
 
 function func(i, j = 1) {
@@ -69,7 +69,7 @@ function func(i, j = 1) {
 }
 
 
-- Remaining parameters:
+## Remaining parameters:
 
 
 function func(i, j, ...name) {
@@ -85,7 +85,7 @@ func(1, 2, 3, 4) // result 5
 Remaining parameters can be called directly in a function using a specified name as an array.
 
 
-- Spread operator:
+## Spread operator:
 
 
 let arr1 = [ 1, 2, 3 ]
@@ -118,7 +118,7 @@ let chars = [...str ]  // [ "f", "o", "o" ]
 The easiest way to convert strings into single chars.
 
 
-- String - Literals (Templating):
+## String - Literals (Templating):
 
 
 let x = 1;
@@ -132,7 +132,7 @@ Large HTML content can also be written over several lines using the ``' characte
 ${} execute Vriablen or JavaScript code directly after assignment.
 
 
-- Object - Short notation:
+## Object - Short notation:
 
 
 let i = 1, j = 2
@@ -167,7 +167,7 @@ Output: { func1: function(i, j) {}, func2: function(i, j) {} }
 Short notation to pass functions with names to an object.
 
 
-- Object - dynamic properties:
+## Object - dynamic properties:
 
 
 let obj = {
@@ -183,7 +183,7 @@ Output: { i: 1, i123: 2 }
 Object properties can be named dynamically using [].
 
 
-- Variable from array assignment:
+## Variable from array assignment:
 
 
 let arr = [ 1, 2, 3 ]
@@ -194,14 +194,14 @@ let [ x, , y ] = arr // Output Variable x = 1, y = 3
 The variables named x and y are generated with the values from the array.
 
 
-- Variable swap:
+## Variable swap:
 
 [x, y] =[y, x]
 
 The easiest way to swap variables.
 
 
-- Variable from object assignment:
+## Variable from object assignment:
 
 
 function getSpecObj() {
@@ -215,7 +215,7 @@ let { name1, name2, name3 } = getSpecObj() // Output variable name1 = 1, name2 =
 The variables with the names name1, name2 and name3 are created with the values from the object.
 
 
-- Depth assignment:
+## Depth assignment:
 
 function getSpecObj() {
 
@@ -232,7 +232,7 @@ The variables with the names i, j and x are created with the values from the obj
 Variable from object and array assignment with standard parameters:
 
 
-- Object assignment:
+## Object assignment:
 
 
 const obj = { x: 1 }
@@ -244,7 +244,7 @@ let { x, y = 2 } = obj // Output variable x = 1, y = 2
 The variables with the names x and y are generated with the values from the object. y is assigned the value 2 by default if the object has no property with the same name.
 
 
-- Array assignment:
+## Array assignment:
 
 let [ x, y = 2, z] = arr // Output Variable x = 1, y = 2, z = undefined
 
@@ -254,7 +254,7 @@ The variables with the names x and y are generated with the values from the arra
 Object and array assignment as parameters of a function:
 
 
-- Parameter as an array:
+## Parameter as an array:
 
 function func1([ param1, param2 ]) {
 
@@ -267,7 +267,7 @@ func1([ 1, 2 ]);
 The values are passed in the order in the array of variables param1 and param2
 
 
-- Parameter as an object:
+## Parameter as an object:
 
 
 function func2({ param1: p1, param2: p2 }) {
@@ -283,7 +283,7 @@ func2({ param1: 1, param2: 2 }))
 After the assignment, the values are transferred in the object of the variables p1 = param1 = 1 and p2 = param2 = 2
 
 
-- Abbreviated form:
+## Abbreviated form:
 
 function func3({ param1, param2 }) {
 
@@ -296,7 +296,7 @@ func3({ param1: 1, param2: 2 });
 After the assignment, the values are transferred in the object of the variables param1 = 1 and param2 = 2.
 
 
-- Classes:
+## Classes:
 
 
 class className {
@@ -354,7 +354,7 @@ Static methods are defined using the keyword "static".
 Getter and Setter are set using the words "get" and "set".
 
 
-- Sets:
+## Sets:
 
 
 const s = new Set()
@@ -384,7 +384,7 @@ for(let key of s.values()) {
 }
 
 
-- Maps:
+## Maps:
 
 
 let m = new Map()
@@ -414,9 +414,9 @@ for(let[key, val] of m.entries()) {
 }
 
 
-- Newer methods:
+## Newer methods:
 
-- Merge objects:
+## Merge objects:
 
 var obj1 = { prop1: 1 }
 
@@ -429,26 +429,26 @@ Object.assign(obj1, obj2, obj3) // Output { prop1: 1, prop2: 2, prop3: 4, prop5:
 Objects can be merged using Object.assign()
 
 
-- Array search:
+## Array search:
 
 [ 1, 3, 4, 2 ].find(x => x > 3) // result 4
 
 [ 1, 3, 4, 2 ].findIndex(x => x > 3) // result 2
 
 
-- String repetition:
+## String repetition:
 
 "test".repeat(3) // Output "testtesttest"
 
 
-- String search:
+## String search:
 
 "hello".includes("ell") // Output "true"
 
 "hello".includes("ell", 1) // Parameter 2 = Index, Output "true"
 
  
-- String startsWith and endsWith:
+## String startsWith and endsWith:
 
  
 "hello".startsWith("ello", 1) // Parameter 2 = Index, Output true
@@ -457,7 +457,7 @@ Objects can be merged using Object.assign()
 
  
 
-- NaN and finite test:
+## NaN and finite test:
 
 
 Number.isNaN(NaN) // Output "true".
@@ -465,7 +465,7 @@ Number.isNaN(NaN) // Output "true".
 Number.isFinite(NaN) // Output "false
 
 
-- Check for secure integers within the validity range:
+## Check for secure integers within the validity range:
 
 
 Number.isSafeInteger(1) // Output true
@@ -473,12 +473,12 @@ Number.isSafeInteger(1) // Output true
 Number.isSafeInteger(9007199254740992) // Output "false
 
 
-- Truncate the decimal places:
+## Truncate the decimal places:
 
 Math.trunc(99.9)) // 99
 
 
-- Promises - Asynchronous call of methods on return:
+## Promises - Asynchronous call of methods on return:
 
 
 function msgAfterTimeout(message, name, timeout) {
@@ -504,7 +504,7 @@ msgAfterTimeout("", "Hans", 100).then((message) =>
 )
 
 
-- Combine several promises:
+## Combine several promises:
 
 function fetchAsync(url, timeout, onData, onError) {
 
@@ -543,7 +543,7 @@ Promise.all([
 })
 
 
-- Proxies - Dynamic call and corresponding return in object notation:
+## Proxies - Dynamic call and corresponding return in object notation:
 
 let target = {
 
@@ -566,7 +566,7 @@ proxy.test // Output "Welcome, test"
 proxy.maxmustermann // result "Not known: maxmustermann"
 
 
-- Reflection - Dynamic call and corresponding return in object notation (similar to proxies):
+## Reflection - Dynamic call and corresponding return in object notation (similar to proxies):
 
 
 let obj = { a: 1 }
@@ -586,7 +586,7 @@ console.log(Reflect.ownKeys(obj)) // Output [ 'a', 'b', 'c' ]
 PHP 7 / 7.1 / 7.2 Updates
 
 
-- Sorting of arrays:
+## Sorting of arrays:
 
 
 The <=> operator saves you a complete check or comparison for <, =, and >...
@@ -604,7 +604,7 @@ aar => 1, 2, 3
 
 
 
-- Get request values (POST, GET, etc.):
+## Get request values (POST, GET, etc.):
 
 
 $userId = $_POST['ID_User']? $_GET['ID_User']? System does not know the user!';
@@ -612,7 +612,7 @@ $userId = $_POST['ID_User']? $_GET['ID_User']? System does not know the user!';
 No errors are thrown during direct access from $_POST.
 
 
-- Anonymous classes:
+## Anonymous classes:
 
 
 class User {
@@ -640,7 +640,7 @@ $maxMustermann = new class('Max Mustermann') extends User {
 echo $maxMustermann->hello();
 
 
-- Type declarations:
+## Type declarations:
 
 
 function output(string $value): string {
@@ -656,7 +656,7 @@ since PHP 7.1 also'void': No return value
 since PHP 7.2 also 'object' possible
 
 
-- Error handling:
+## Error handling:
 
 
 try {
@@ -709,13 +709,13 @@ catch(Throwable) { // catches exception and error and all throwables
 
 //..
 
-- Random function:
+## Random function:
 
 
 echo random_int(1, 100);
 
 
-- Parameters at session_start 
+## Parameters at session_start 
 
 (different session handling possible)
 
@@ -727,7 +727,7 @@ session_start([
 ]);
 
 
-- Definition of array constants:
+## Definition of array constants:
 
 
 define('SETTINGS', [
@@ -741,7 +741,7 @@ define('SETTINGS', [
 
 echo SETTINGS['setting1'];
 
-- Access to data:
+## Access to data:
 
 
 $data = [
@@ -759,7 +759,7 @@ echo $a;
 echo $b;
 
 
-- Access to any string positions:
+## Access to any string positions:
 
 
 $string[-1] // => the last character etc.
@@ -785,7 +785,7 @@ New Features PHP 7.0, 7.1, 7.2 and ES 6/7
 ES6 / ES7 Updates
 
 
-- let - Variablen:
+## let - Variablen:
 
 for(let i = 0; i < 10; i++) {
 
@@ -796,7 +796,7 @@ for(let i = 0; i < 10; i++) {
 Var - Variablen x und i wären auch nach der Schleife noch vorhanden, was nicht gewollt ist!
 
 
-- Konstanten:
+## Konstanten:
 
 
 const element = document.querySelector('#elementId');
@@ -809,7 +809,7 @@ Alle HTML-Elemente, Objekte, Arrays oder feste Werte sollte als eine Konstante d
 Objekte und Arrays können auch danach geändert werden, dürfen jedoch nich komplett neu erstellt werden, was auch Sinn macht.
 
 
-- Arrow-Functions:
+## Arrow-Functions:
 
 
 Eine Funktion:
@@ -839,7 +839,7 @@ arr.forEach(i => {
 });
 
 
-- Standard-Parameter:
+## Standard-Parameter:
 
 
 function func(i, j = 1) {
@@ -849,7 +849,7 @@ function func(i, j = 1) {
 }
 
 
--  Rest-Parameter:
+##  Rest-Parameter:
 
 
 function func(i, j, ...name) {
@@ -865,7 +865,7 @@ func(1, 2, 3, 4) // Ausgabe 5
 Restliche Parameter können direkt in einer Funktion über einen festgelegten Namen als Array aufgerufen werden.
 
 
-- Spread-Operator:
+## Spread-Operator:
 
 
 let arr1 = [ 1, 2, 3 ]
@@ -898,7 +898,7 @@ let chars = [ ...str ] // [ "f", "o", "o" ]
 Die einfachste Möglichkeit um Strings in einzelne in Chars umzuwandeln.
 
 
-- String - Literale (Templating):
+## String - Literale (Templating):
 
 
 let x = 1;
@@ -912,7 +912,7 @@ Großer HTML-Inhalt kann mit Hilfe des '`' - Zeichens auch über mehrere Zeilen 
 ${} führen Vriablen oder JavaScript Code direkt nach der Zuweisung aus.
 
 
-- Objekt - Kurzschreibweise:
+## Objekt - Kurzschreibweise:
 
 
 let i = 1, j = 2
@@ -947,7 +947,7 @@ obj = {
 Kurzschreibweise um Funktionen mit Namen an einen Objekt übergeben zu können.
 
 
-- Objekt - dynamische Eigenschaften:
+## Objekt - dynamische Eigenschaften:
 
 
 let obj = {
@@ -963,7 +963,7 @@ let obj = {
 Objekt-Eigenschaften können über [] dynamisch benannt werden.
 
 
-- Variable aus Array-Zuweisung;
+## Variable aus Array-Zuweisung;
 
 
 let arr = [ 1, 2, 3 ]
@@ -981,7 +981,7 @@ Variablen-Tausch:
 Die einfachste Möglichkeit um Variablen zu vertauschen.
 
 
-- Variable aus Objekt-Zuweisung:
+## Variable aus Objekt-Zuweisung:
 
 
 function getSpecObj() {
@@ -1009,7 +1009,7 @@ let { name1: i, name2: j, name3: { name4: x } } = getSpecObj() // Ausgabe Variab
 Die Variablen mit dem Namen i, j und x werden mit den Werten aus dem Objekt durch Zuweisung der Objekt-Namen erzeugt.
 
 
-- Variable aus Objekt- und Array-Zuweisung mit Standard-Parametern:
+## Variable aus Objekt- und Array-Zuweisung mit Standard-Parametern:
 
 
 Objekt-Zuweisung:
@@ -1031,7 +1031,7 @@ let [ x, y = 2, z ] = arr // Ausgabe Variable x = 1, y = 2, z = undefined
 Die Variablen mit dem Namen x und y werden mit den Werten aus dem Array erzeugt. y wird standardmäßig mit dem Wert 2 belegt, wenn das Array keinen Wert mit demselben Index besitzt.
 
 
-- Objekt- und Array Zuweisung als Parameter einer Funktion:
+## Objekt- und Array Zuweisung als Parameter einer Funktion:
 
 
 Parameter als Array:
@@ -1076,7 +1076,7 @@ func3({ param1: 1, param2: 2 });
 Es werden die Werte nach der Zuweisung im Objekt der Variable param1 = 1 und param2 = 2 übergeben
 
 
-- Klassen:
+## Klassen:
 
 
 class className {
@@ -1134,7 +1134,7 @@ Statische Methoden werden über das Schlüsselwort "static" definiert.
 Getter und Setter werden über die Wörter "get" und "set" gesetzt.
 
 
-- Sets:
+## Sets:
 
 
 const s = new Set()
@@ -1164,7 +1164,7 @@ for(let key of s.values()) {
 }
 
 
-- Maps:
+## Maps:
 
 
 let m = new Map()
@@ -1194,7 +1194,7 @@ for(let[key, val] of m.entries()) {
 }
 
 
-- Neuere Methoden:
+## Neuere Methoden:
 
 Objekte zusammenfügen:
 
@@ -1258,7 +1258,7 @@ Abschneiden der Nachkommastellen:
 Math.trunc(99.9)) // 99
 
 
-- Promises - Asynchroner Aufruf von Methoden bei Rückgabe:
+## Promises - Asynchroner Aufruf von Methoden bei Rückgabe:
 
 
 function msgAfterTimeout(nachricht, name, timeout) {
@@ -1323,7 +1323,7 @@ Promise.all([
 })
 
 
-- Proxys - Dynamischer Aufruf und entsprechende Rückgabe in Objekt-Schreibweise:
+## Proxys - Dynamischer Aufruf und entsprechende Rückgabe in Objekt-Schreibweise:
 
 let target = {
 
@@ -1346,7 +1346,7 @@ proxy.test // Ausgabe "Willkommen, test"
 proxy.maxmustermann // Ausgabe "Nicht bekannt: maxmustermann"
 
 
-- Reflection - Dynamischer Aufruf und entsprechende Rückgabe in Objekt-Schreibweise (ähnlich der Proxys):
+## Reflection - Dynamischer Aufruf und entsprechende Rückgabe in Objekt-Schreibweise (ähnlich der Proxys):
 
 
 let obj = { a: 1 }
@@ -1366,7 +1366,7 @@ console.log(Reflect.ownKeys(obj)) // Ausgabe [ 'a', 'b', 'c' ]
 PHP 7 / 7.1 / 7.2 Updates
 
 
-- Sortieren von Arrays:
+## Sortieren von Arrays:
 
 
 Der <=> Operator erspart einem eine komplette Überprüfung oder Vergleiche auf <, =, und >..
@@ -1384,7 +1384,7 @@ usort($arr, function($a, $b) {
 
 
 
-- Holen der Request-Werte (POST, GET etc.):
+## Holen der Request-Werte (POST, GET etc.):
 
 
 $userId = $_POST['ID_User'] ?? $_GET['ID_User'] ?? 'System kennt den User nicht!';
@@ -1393,7 +1393,7 @@ $userId = $_POST['ID_User'] ?? $_GET['ID_User'] ?? 'System kennt den User nicht!
 Hierbei werden auch keine Fehler beim direkten Zugriff aus $_POST geschmissen.
 
 
-- Anonyme Klassen:
+## Anonyme Klassen:
 
 
 class User {
@@ -1421,7 +1421,7 @@ $maxMustermann = new class('Max Mustermann') extends User {
 echo $maxMustermann->hallo();
 
 
-- Typdeklarationen
+## Typdeklarationen
 
 
 function ausgabe(string $wert): string {
@@ -1437,7 +1437,7 @@ seit PHP 7.1 auch 'void' : Keine Rückgabe
 seit PHP 7.2 auch 'object' möglich
 
 
-- Fehlerbehandlung
+## Fehlerbehandlung
 
 
 try {
@@ -1490,13 +1490,13 @@ alternativ:
 
 //..
 
-- Zufallsfunktion
+## Zufallsfunktion
 
 
 echo random_int(1, 100);
 
 
-- Parameter bei session_start direkt möglich (unterschiedliches Session-Handling möglich)
+## Parameter bei session_start direkt möglich (unterschiedliches Session-Handling möglich)
 
 
 session_start([
@@ -1506,7 +1506,7 @@ session_start([
 ]);
 
 
-- Definition von Array Konstanten
+## Definition von Array Konstanten
 
 
 define('SETTINGS', [
@@ -1520,7 +1520,7 @@ define('SETTINGS', [
 
 echo SETTINGS['setting1'];
 
-- Zugriffe auf Daten
+## Zugriffe auf Daten
 
 
 $data = [
@@ -1538,7 +1538,7 @@ echo $a;
 echo $b;
 
 
-- Zugriff auf beliebige String-Positionen
+## Zugriff auf beliebige String-Positionen
 
 
 $string[-1] // => das letzte Zeichen usw.
