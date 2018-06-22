@@ -1359,7 +1359,7 @@ console.log(Reflect.ownKeys(obj)) // Ausgabe [ 'a', 'b', 'c' ]
 
 
 
-# PHP 7 / 7.1 / 7.2 Updates
+## PHP 7 / 7.1 / 7.2 Updates
 
 
 ## Sortieren von Arrays:
