@@ -1,0 +1,8 @@
+#loginContainer {
+    margin: 20px;
+}
+
+input, button {
+    padding: 2px 4px;
+    width: 200px;
+}
