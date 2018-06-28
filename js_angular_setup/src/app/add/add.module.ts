@@ -1,9 +1,10 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AddComponent} from './add.component';
+import {UtilsModule} from '../utils/utils.module';
 
 @NgModule({
-    imports: [CommonModule],
+    imports: [CommonModule, UtilsModule],
     declarations: [AddComponent],
     exports: [AddComponent]
 })

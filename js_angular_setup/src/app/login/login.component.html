@@ -12,3 +12,15 @@
     <button>Login</button>
 
 </div>
+
+
+<!--<span *ngFor="let usr of userList" [innerHTML]="usr.login"></span>-->
+
+
+<span *ngFor="let usr of userList">
+    <!--<span>{{'test' | reverse}}</span>-->
+    <span [ngSwitch]="usr.login">
+        <span *ngSwitchCase="'test'" myItalic [myColor]="'red'" [ngClass]="{'active': usr.login==='test', italic: true}" [ngStyle]="{'margin': '5px'}"></span>
+        <span *ngSwitchDefault myItalic [myColor]="'red'"  [ngClass]="{'active': usr.login==='maxmuster', italic: true}" [ngStyle]="{'margin': '5px'}">maxmuster</span>
+    </span>
+</span>
